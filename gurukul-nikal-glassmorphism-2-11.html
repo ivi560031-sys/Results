@@ -1,0 +1,1925 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>रयत गुरुकुल प्रकल्प - निकाल पत्रक (सर्व इयत्ता)</title>
+<meta name="color-scheme" content="light">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1a1030; --paper:#f4f6ff; --line:rgba(255,255,255,.4);
+    --accent:#a855f7; --accent2:#00e5a0; --pass:#00e5a0; --fail:#ff3d68;
+    --soft:rgba(255,255,255,.35); --gold:#ffd23f;
+    --g1:#8b2fff; --g2:#ff2fd4; --g3:#00d4ff; --g4:#ffb800; --g5:#00e5a0; --g6:#ff3d68;
+  }
+  *{box-sizing:border-box;}
+  html,body{height:100%;}
+  body{
+    margin:0; font-family:'Noto Sans Devanagari',sans-serif; color:var(--ink); padding:20px 12px 60px;
+    background:
+      radial-gradient(1200px 800px at 5% -10%, rgba(139,47,255,.85), transparent 55%),
+      radial-gradient(1100px 750px at 100% -5%, rgba(0,212,255,.75), transparent 55%),
+      radial-gradient(1000px 800px at 10% 105%, rgba(255,47,212,.7), transparent 55%),
+      radial-gradient(1000px 800px at 100% 100%, rgba(0,229,160,.65), transparent 55%),
+      radial-gradient(700px 500px at 50% 50%, rgba(255,184,0,.35), transparent 60%),
+      linear-gradient(160deg,#0d0620,#1e0a45 30%,#05213f 65%,#150a2e);
+    background-attachment:fixed;
+    min-height:100vh;
+  }
+  .wrap{max-width:1300px;margin:0 auto;}
+
+  /* ---------- glass base ---------- */
+  .glass{
+    background:rgba(255,255,255,.14);
+    border:1px solid rgba(255,255,255,.35);
+    -webkit-backdrop-filter:blur(18px) saturate(160%);
+    backdrop-filter:blur(18px) saturate(160%);
+    box-shadow:0 8px 32px rgba(20,10,50,.28), inset 0 1px 0 rgba(255,255,255,.4);
+  }
+
+  header{
+    text-align:center; color:#fff;
+    border-radius:20px; padding:22px 16px; margin-bottom:16px;
+    background:linear-gradient(120deg, rgba(139,47,255,.75), rgba(255,47,212,.5) 50%, rgba(0,212,255,.55));
+    border:1px solid rgba(255,255,255,.5);
+    -webkit-backdrop-filter:blur(20px) saturate(200%);
+    backdrop-filter:blur(20px) saturate(200%);
+    box-shadow:0 10px 45px rgba(139,47,255,.5), inset 0 1px 0 rgba(255,255,255,.6);
+  }
+  header h1{margin:0 0 4px; font-size:1.35rem; font-weight:800; letter-spacing:.3px; text-shadow:0 2px 10px rgba(0,0,0,.25);}
+  header p{margin:2px 0; font-size:.92rem; opacity:.95;}
+  header .badge{
+    display:inline-block; margin-top:8px; background:rgba(255,255,255,.25); color:#fff; font-weight:700;
+    padding:5px 14px; border-radius:20px; font-size:.85rem; border:1px solid rgba(255,255,255,.45);
+    -webkit-backdrop-filter:blur(6px); backdrop-filter:blur(6px);
+  }
+
+  .toolbar{
+    display:flex; flex-wrap:wrap; gap:10px; align-items:center; justify-content:space-between;
+    border-radius:16px; padding:12px 14px; margin-bottom:14px;
+  }
+  /* rotate a few different, vivid glass tints across the repeated toolbar rows */
+  .toolbar:nth-of-type(6n+1){background:linear-gradient(120deg, rgba(139,47,255,.32), rgba(139,47,255,.12)); border:1px solid rgba(139,47,255,.55); -webkit-backdrop-filter:blur(16px) saturate(180%); backdrop-filter:blur(16px) saturate(180%); box-shadow:0 6px 26px rgba(139,47,255,.25), inset 0 1px 0 rgba(255,255,255,.4);}
+  .toolbar:nth-of-type(6n+2){background:linear-gradient(120deg, rgba(0,212,255,.32), rgba(0,212,255,.12)); border:1px solid rgba(0,212,255,.55); -webkit-backdrop-filter:blur(16px) saturate(180%); backdrop-filter:blur(16px) saturate(180%); box-shadow:0 6px 26px rgba(0,212,255,.25), inset 0 1px 0 rgba(255,255,255,.4);}
+  .toolbar:nth-of-type(6n+3){background:linear-gradient(120deg, rgba(255,47,212,.32), rgba(255,47,212,.12)); border:1px solid rgba(255,47,212,.55); -webkit-backdrop-filter:blur(16px) saturate(180%); backdrop-filter:blur(16px) saturate(180%); box-shadow:0 6px 26px rgba(255,47,212,.25), inset 0 1px 0 rgba(255,255,255,.4);}
+  .toolbar:nth-of-type(6n+4){background:linear-gradient(120deg, rgba(255,184,0,.32), rgba(255,184,0,.12)); border:1px solid rgba(255,184,0,.55); -webkit-backdrop-filter:blur(16px) saturate(180%); backdrop-filter:blur(16px) saturate(180%); box-shadow:0 6px 26px rgba(255,184,0,.25), inset 0 1px 0 rgba(255,255,255,.4);}
+  .toolbar:nth-of-type(6n+5){background:linear-gradient(120deg, rgba(0,229,160,.32), rgba(0,229,160,.12)); border:1px solid rgba(0,229,160,.55); -webkit-backdrop-filter:blur(16px) saturate(180%); backdrop-filter:blur(16px) saturate(180%); box-shadow:0 6px 26px rgba(0,229,160,.25), inset 0 1px 0 rgba(255,255,255,.4);}
+  .toolbar:nth-of-type(6n+6){background:linear-gradient(120deg, rgba(255,61,104,.32), rgba(255,61,104,.12)); border:1px solid rgba(255,61,104,.55); -webkit-backdrop-filter:blur(16px) saturate(180%); backdrop-filter:blur(16px) saturate(180%); box-shadow:0 6px 26px rgba(255,61,104,.25), inset 0 1px 0 rgba(255,255,255,.4);}
+
+  .toolbar .group{display:flex; gap:8px; flex-wrap:wrap; align-items:center;}
+  .toolbar label{color:#fff; text-shadow:0 1px 4px rgba(0,0,0,.2);}
+  select, input[type=text], input[type=number], input[type=date]{
+    font-family:inherit; font-size:.95rem; border:1px solid rgba(255,255,255,.5); border-radius:8px; padding:7px 10px;
+    background:rgba(255,255,255,.55); color:var(--ink);
+    -webkit-backdrop-filter:blur(6px); backdrop-filter:blur(6px);
+  }
+  select:focus, input[type=text]:focus, input[type=number]:focus, input[type=date]:focus{
+    outline:2px solid rgba(123,92,255,.6); background:rgba(255,255,255,.8);
+  }
+  .examtabs{display:flex; gap:6px; flex-wrap:wrap;}
+  .examtabs button{
+    font-family:inherit; font-weight:700; font-size:.88rem; padding:8px 14px; border-radius:10px;
+    border:1px solid rgba(255,255,255,.55); background:rgba(255,255,255,.4); color:#1a1030; cursor:pointer; transition:.15s;
+    -webkit-backdrop-filter:blur(6px); backdrop-filter:blur(6px);
+  }
+  .examtabs button:hover{background:rgba(255,255,255,.6);}
+  .examtabs button.active{
+    background:linear-gradient(135deg,var(--g1),var(--g2)); border-color:transparent; color:#fff;
+    box-shadow:0 4px 18px rgba(139,47,255,.6);
+  }
+  .btn{
+    font-family:inherit; font-weight:700; font-size:.85rem; padding:8px 14px; border-radius:10px;
+    border:1px solid rgba(255,255,255,.55); background:rgba(255,255,255,.4); color:#1a1030;
+    cursor:pointer; transition:.15s; white-space:nowrap;
+    -webkit-backdrop-filter:blur(6px); backdrop-filter:blur(6px);
+  }
+  .btn:hover{background:rgba(255,255,255,.65); transform:translateY(-1px);}
+  .btn.primary{background:linear-gradient(135deg,var(--g5),var(--g3)); color:#052; border-color:transparent; box-shadow:0 4px 16px rgba(0,229,160,.55); font-weight:800;}
+  .btn.primary:hover{filter:brightness(1.08);}
+  .btn.warn{background:linear-gradient(135deg,var(--g6),#c9184a); color:#fff; border-color:transparent; box-shadow:0 4px 16px rgba(255,61,104,.5);}
+  .btn.warn:hover{filter:brightness(1.08);}
+  .btn.save{background:linear-gradient(135deg,var(--g1),var(--g2),var(--g4)); color:#fff; border-color:transparent; box-shadow:0 4px 20px rgba(255,47,212,.55); font-weight:800;}
+  .btn.save:hover{filter:brightness(1.12); transform:translateY(-1px);}
+  .btn.small{padding:5px 10px; font-size:.78rem;}
+
+  .tableCard{
+    background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.4); border-radius:18px; overflow:hidden;
+    -webkit-backdrop-filter:blur(18px) saturate(180%); backdrop-filter:blur(18px) saturate(180%);
+    box-shadow:0 10px 40px rgba(139,47,255,.3), inset 0 1px 0 rgba(255,255,255,.45);
+  }
+  .tableScroll{overflow-x:auto;}
+  table{border-collapse:collapse; width:100%; min-width:1350px; font-size:.86rem;}
+  thead tr.top{background:linear-gradient(120deg, rgba(139,47,255,.92), rgba(255,47,212,.75) 55%, rgba(0,212,255,.85)); color:#fff;}
+  thead tr.sub{background:rgba(255,255,255,.28); color:#1a1030;}
+  th, td{border:1px solid rgba(255,255,255,.35); padding:6px 6px; text-align:center; vertical-align:middle;}
+  th{font-weight:700; font-size:.8rem;}
+  td.name{text-align:right; min-width:190px;}
+  tbody tr{background:rgba(255,255,255,.07);}
+  tbody tr:nth-child(even){background:rgba(255,255,255,.16);}
+  tbody tr:hover{background:rgba(255,184,0,.22);}
+  .roll{color:#ffd23f; font-size:.75rem; font-weight:700;}
+  .maxWrap{white-space:nowrap;}
+  input.maxHeadInp{
+    box-sizing:border-box; width:32px; max-width:100%; text-align:center; padding:1px 0; border:1px solid rgba(255,255,255,.7); border-radius:5px;
+    background:#fff; color:#1a1030; font-family:inherit; font-size:.72rem; font-weight:800;
+    -moz-appearance:textfield; color-scheme:light;
+  }
+  input.maxHeadInp::-webkit-outer-spin-button, input.maxHeadInp::-webkit-inner-spin-button{ -webkit-appearance:none; margin:0; }
+  input.maxHeadInp:focus{ outline:2px solid var(--accent2); background:#fff; color:#1a1030; }
+  input.markbox{
+    width:56px; text-align:center; padding:5px 2px; border:1px solid rgba(255,255,255,.5); border-radius:6px;
+    background:rgba(255,255,255,.55); font-family:inherit; font-size:.85rem; color:var(--ink);
+  }
+  input.markbox:focus{outline:2px solid var(--accent2); border-color:var(--accent2); background:rgba(255,255,255,.85);}
+  input.namebox{
+    width:100%; min-width:170px; text-align:right; border:1px solid transparent; background:transparent;
+    padding:5px 4px; border-radius:6px; font-family:inherit; font-size:.86rem; font-weight:600; color:#fff;
+  }
+  input.namebox:focus{background:rgba(255,255,255,.85); border-color:var(--accent2); outline:none; color:var(--ink);}
+  td.calc{font-weight:700; background:rgba(255,255,255,.18);}
+  td.pct{font-weight:800;}
+  .tag{
+    display:inline-block; padding:3px 9px; border-radius:12px; font-size:.72rem; font-weight:800;
+    -webkit-backdrop-filter:blur(4px); backdrop-filter:blur(4px);
+  }
+  .tag.pat{background:rgba(0,229,160,.28); color:#00432f; border:1px solid rgba(0,229,160,.6); font-weight:800;}
+  .tag.apat{background:rgba(255,61,104,.28); color:#6b0021; border:1px solid rgba(255,61,104,.6); font-weight:800;}
+  .rowdel{cursor:pointer; color:#ffd23f; font-weight:800; font-size:.95rem;}
+  .rowdel:hover{color:var(--fail);}
+  .rowdel.locked{cursor:default; color:rgba(255,255,255,.4); font-size:.9rem;}
+  .rowdel.locked:hover{color:rgba(255,255,255,.4);}
+  #btnDelLock.unlocked{background:linear-gradient(135deg,var(--g6),#c9184a); color:#fff; border-color:transparent;}
+  .btn.unlocked{background:linear-gradient(135deg,var(--g6),#c9184a); color:#fff; border-color:transparent;}
+  input.maxHeadInp.locked{background:rgba(255,255,255,.5); color:#6b6480; cursor:not-allowed; opacity:.85;}
+
+  tfoot td{background:rgba(255,255,255,.22); font-weight:800; color:#20233a;}
+
+  .footerRow{display:flex; justify-content:space-between; align-items:center; padding:12px 14px; flex-wrap:wrap; gap:8px;}
+  .stat{font-size:.85rem; color:#fff; text-shadow:0 1px 4px rgba(0,0,0,.2);}
+  .stat b{color:var(--gold);}
+
+  /* modal */
+  .overlay{
+    position:fixed; inset:0; background:rgba(15,10,35,.55); display:none; align-items:center; justify-content:center;
+    z-index:50; padding:14px;
+    -webkit-backdrop-filter:blur(4px); backdrop-filter:blur(4px);
+  }
+  .overlay.show{display:flex;}
+  .modal{
+    background:rgba(30,25,60,.55); border-radius:18px; padding:18px; width:100%; max-width:560px; max-height:88vh; overflow:auto;
+    border:1px solid rgba(255,255,255,.35);
+    -webkit-backdrop-filter:blur(24px) saturate(160%); backdrop-filter:blur(24px) saturate(160%);
+    box-shadow:0 20px 60px rgba(0,0,0,.45), inset 0 1px 0 rgba(255,255,255,.3);
+    color:#fff;
+  }
+  .modal h3{margin:0 0 8px; color:var(--gold);}
+  .modal p{font-size:.85rem; color:#e6e2ff; margin:4px 0 10px;}
+  .modal textarea{
+    width:100%; min-height:220px; font-family:'Noto Sans Devanagari',monospace; font-size:.88rem; padding:10px;
+    border:1px solid rgba(255,255,255,.4); border-radius:10px; resize:vertical;
+    background:rgba(255,255,255,.85); color:var(--ink);
+  }
+  .modal .modalActions{display:flex; justify-content:flex-end; gap:8px; margin-top:12px;}
+  .modal .fileRow{display:flex; align-items:center; gap:10px; margin:8px 0;}
+  .subjRow{display:flex; gap:8px; align-items:center; margin-bottom:8px;}
+  .subjRow input[type=text]{flex:1; min-width:0;}
+  .subjRow input[type=number]{width:90px;}
+
+  /* password drop-panel (खालच्या दिशेने उघडणारे) */
+  .dropAnchor{position:relative; display:inline-block;}
+  .dropPanel{
+    display:none; position:absolute; top:calc(100% + 8px); left:0; z-index:45;
+    background:rgba(30,25,60,.92); border:1px solid rgba(255,255,255,.4); border-radius:12px;
+    padding:12px; min-width:220px; gap:8px; flex-direction:column;
+    -webkit-backdrop-filter:blur(20px) saturate(160%); backdrop-filter:blur(20px) saturate(160%);
+    box-shadow:0 14px 40px rgba(0,0,0,.5), inset 0 1px 0 rgba(255,255,255,.25);
+  }
+  .dropPanel.show{display:flex;}
+  .dropPanel label{color:#e6e2ff; font-size:.78rem; font-weight:700;}
+  .dropPanel input[type=password]{width:100%;}
+  .dropPanel .row{display:flex; gap:6px; justify-content:flex-end;}
+
+  .toast{
+    position:fixed; bottom:18px; left:50%; transform:translateX(-50%) translateY(20px);
+    background:rgba(18,184,134,.85); color:#fff; border:1px solid rgba(255,255,255,.4);
+    -webkit-backdrop-filter:blur(12px); backdrop-filter:blur(12px);
+    padding:10px 20px; border-radius:24px; font-size:.88rem; font-weight:700; opacity:0; transition:.25s;
+    box-shadow:0 8px 24px rgba(0,0,0,.3); z-index:60;
+  }
+  .toast.show{opacity:1; transform:translateX(-50%) translateY(0);}
+
+  @media (max-width:640px){
+    header h1{font-size:1.05rem;}
+    .toolbar{flex-direction:column; align-items:stretch;}
+    .toolbar .group{justify-content:center;}
+
+    .tableScroll{overflow-x:auto; -webkit-overflow-scrolling:touch;}
+    table{min-width:920px; font-size:.68rem;}
+    col.c-no{width:3.5%;}
+    col.c-roll{width:6%;}
+    col.c-name{width:15%;}
+    col.c-tot{width:7%;}
+    col.c-pct{width:6%;}
+    col.c-shera{width:7%;}
+    th, td{padding:4px 2px; font-size:.68rem; word-break:break-word; overflow-wrap:break-word;}
+    th{font-size:.66rem; line-height:1.15;}
+    input.maxHeadInp{width:26px; font-size:.62rem; padding:0;}
+    td.name{min-width:0;}
+    input.markbox{width:100%; min-width:0; padding:4px 2px; font-size:.7rem;}
+    input.namebox{min-width:0; font-size:.68rem; padding:3px;}
+    .roll{font-size:.62rem;}
+    .tag{font-size:.56rem; padding:2px 5px;}
+    col.c-del{width:22px;}
+    col.g-del{width:22px;}
+    .rowdel{font-size:.75rem;}
+    tfoot td{font-size:.66rem; padding:4px 2px;}
+  }
+  @media print{
+    @page{ size: A4 portrait; margin: 8mm; }
+    .toolbar,.rowdel,.overlay,.noprint{display:none !important;}
+    tfoot{display:none !important;}
+    .footerRow{
+      display:flex !important; justify-content:center !important; padding:8px 0 0 !important;
+      background:transparent !important; box-shadow:none !important;
+    }
+    .footerRow .stat{
+      color:#3b2b1a !important; text-shadow:none !important; font-size:9pt !important; font-weight:700 !important;
+    }
+    .footerRow .stat b{color:#000 !important;}
+    body{background:#fff; padding:0; -webkit-print-color-adjust:exact; print-color-adjust:exact;}
+    .wrap{max-width:100%;}
+    header{
+      padding:8px 10px; border-radius:6px; box-shadow:none;
+      background:#fff !important; color:#3b2b1a !important;
+      border:1px solid #999 !important; background-image:none !important;
+    }
+    header h1{font-size:1rem; color:#3b2b1a !important;}
+    header p{font-size:.75rem; margin:1px 0; color:#3b2b1a !important;}
+    header .badge{
+      font-size:.75rem; padding:3px 10px; margin-top:4px;
+      background:#f3ede0 !important; color:#5a3d20 !important; border:1px solid #b8863b;
+    }
+    #classSectionLine, #teacherLine{
+      font-size:.8rem !important; font-weight:700 !important; margin:3px 0 0 !important;
+      color:#3b2b1a !important;
+    }
+
+    .tableCard{border-radius:0; box-shadow:none; border:1px solid #999;}
+    .tableScroll{overflow:visible !important; width:100% !important;}
+    table{
+      min-width:0 !important; width:100% !important; table-layout:fixed !important;
+      font-size:7.2pt !important;
+    }
+    col.c-no{width:3.5%;} col.c-roll{width:6.5%;} col.c-name{width:19%;}
+    col.c-subj{width:6.5%;}
+    col.c-tot{width:8%;} col.c-pct{width:7%;} col.c-shera{width:9%;}
+    col.c-del{width:0; display:none;}
+    thead .top th:last-child, thead .top th:nth-last-child(1),
+    tbody td:last-child{display:none !important;}
+
+    col.g-no{width:4%;} col.g-roll{width:7%;} col.g-name{width:24%;}
+    col.g-sub{width:8.5%;} col.g-tot{width:8%;} col.g-pct{width:8%;}
+    col.g-del{width:0; display:none;}
+    #ghatakTable thead .top th:last-child, #ghatakTable tbody td:last-child{display:none !important;}
+
+    th, td{
+      border:1px solid #999 !important; padding:2px 2px !important;
+      font-size:7.2pt !important; line-height:1.15;
+      overflow:visible !important; word-break:break-word;
+    }
+    td.name{min-width:0;}
+    input.markbox, input.namebox{
+      width:100% !important; min-width:0 !important; max-width:100% !important;
+      font-size:7.2pt !important; padding:1px !important; border:none !important;
+      background:transparent !important; box-sizing:border-box;
+    }
+    input.namebox{text-align:right; font-weight:700; color:#000 !important;}
+    .roll{color:#333 !important;}
+    .tag{font-size:6.6pt !important; padding:1px 5px !important;}
+    tfoot td{font-size:7.2pt !important; padding:2px !important;}
+    tr{page-break-inside:avoid;}
+    thead{display:table-header-group;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <p>रयत शिक्षण संस्थेचे,</p>
+    <h1>छत्रपती श्री शिवाजी महाराज हायस्कूल, मिरी ता. पाथर्डी</h1>
+    <p id="karmveerLine">कर्मवीर विद्याप्रबोधिनी</p>
+    <p id="gurukulLine">रयत गुरुकुल प्रकल्प 2026-27 (अनिवासी)</p>
+    <div class="badge" id="examTitleBadge">विशेष सराव परीक्षा क्रमांक - 1 निकाल</div>
+    <p id="classSectionLine" style="margin-top:6px; font-weight:600;"></p>
+    <p id="teacherLine" style="font-weight:600;"></p>
+  </header>
+
+  <div class="toolbar">
+    <div class="group"><label style="font-size:.85rem;font-weight:700;">इयत्ता:</label></div>
+    <div class="examtabs" id="stdTabs"></div>
+  </div>
+
+  <div class="toolbar">
+    <div class="group"><label style="font-size:.85rem;font-weight:700;">तुकडी:</label></div>
+    <div class="examtabs" id="sectionTabs"></div>
+  </div>
+
+  <div class="toolbar">
+    <div class="group">
+      <span id="syncIndicator" class="tag" style="font-size:.8rem;">🔄 सिंक स्थिती तपासत आहे...</span>
+    </div>
+    <div class="group">
+      <button class="btn" id="btnSyncNow">🔄 या वर्गाचा डेटा सिंक करा</button>
+    </div>
+  </div>
+
+  <div class="toolbar">
+    <div class="group">
+      <label style="font-size:.85rem;font-weight:700;">वर्गशिक्षक:</label>
+      <input type="text" id="teacherName" value="" style="min-width:160px;">
+      <label style="font-size:.85rem;font-weight:700;">इयत्ता:</label>
+      <input type="text" id="className" value="" style="width:60px;">
+      <label style="font-size:.85rem;font-weight:700;">तुकडी:</label>
+      <input type="text" id="section" value="" style="width:50px;">
+    </div>
+    <div class="examtabs" id="modeTabs"></div>
+  </div>
+
+  <div class="toolbar" id="examTabsRow">
+    <div class="group">
+      <label style="font-size:.85rem;font-weight:700;">परीक्षा:</label>
+      <button class="btn small" id="btnAddExam">+ नवीन परीक्षा जोडा</button>
+    </div>
+    <div class="examtabs" id="examTabs"></div>
+  </div>
+
+  <div class="toolbar" id="ghatakTabsRow" style="display:none;">
+    <div class="group">
+      <div class="examtabs" id="ghatakTabs"></div>
+    </div>
+    <div class="group">
+      <label style="font-size:.85rem;font-weight:700;">दिनांक:</label>
+      <input type="date" id="ghatakDate" style="width:150px;">
+    </div>
+  </div>
+
+  <div class="toolbar">
+    <div class="group">
+      <button class="btn primary" id="btnAddRow">+ विद्यार्थी जोडा</button>
+      <button class="btn" id="btnBulkUpload">📋 नावे बल्क अपलोड</button>
+      <button class="btn" id="btnSortRoll">क्रमांकानुसार लावा</button>
+      <button class="btn" id="btnManageSubjects">⚙️ विषय/स्तंभ व्यवस्थापित करा</button>
+      <button class="btn" id="btnSubjLock">🔒 विषय गुण: लॉक</button>
+    </div>
+    <div class="group">
+      <button class="btn save" id="btnSave">💾 Save</button>
+      <button class="btn" id="btnPrint">🖨️ प्रिंट</button>
+      <button class="btn" id="btnExportCsv">⬇️ CSV डाउनलोड</button>
+      <button class="btn" id="btnDelLock">🔒 विद्यार्थी हटवणे: बंद</button>
+
+      <div class="dropAnchor">
+        <button class="btn warn" id="btnReset">रिसेट</button>
+        <div class="dropPanel" id="resetPanel">
+          <label>या वर्गाचा (इयत्ता-तुकडी) रिसेट पासवर्ड टाका:</label>
+          <input type="password" id="resetPasswordInput" placeholder="पासवर्ड">
+          <div class="row">
+            <button class="btn small" id="resetCancelBtn">रद्द</button>
+            <button class="btn small warn" id="resetConfirmBtn">रिसेट करा</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="dropAnchor">
+        <button class="btn small" id="btnSetPassword">🔑 पासवर्ड सेट करा</button>
+        <div class="dropPanel" id="setPasswordPanel">
+          <label id="oldPassLabel" style="display:none;">सध्याचा पासवर्ड:</label>
+          <input type="password" id="oldPasswordInput" placeholder="सध्याचा पासवर्ड" style="display:none;">
+          <label>नवीन पासवर्ड (या वर्गासाठी):</label>
+          <input type="password" id="newPasswordInput" placeholder="किमान 4 अक्षरे/अंक">
+          <div class="row">
+            <button class="btn small" id="setPassCancelBtn">रद्द</button>
+            <button class="btn small primary" id="setPassConfirmBtn">जतन करा</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="toolbar">
+    <div class="group"><label style="font-size:.85rem;font-weight:700;">बॅकअप (सर्व इयत्ता + तुकड्या):</label></div>
+    <div class="group">
+      <button class="btn" id="btnBackupExport">⬇️ पूर्ण बॅकअप डाउनलोड (JSON)</button>
+      <label class="btn" for="backupFile">⬆️ बॅकअप इम्पोर्ट (JSON)</label>
+      <input type="file" id="backupFile" accept="application/json,.json" style="display:none;">
+    </div>
+  </div>
+
+  <div class="tableCard" id="examTableCard">
+    <div class="tableScroll">
+      <table id="mainTable">
+        <colgroup></colgroup>
+        <thead></thead>
+        <tbody id="tbody"></tbody>
+        <tfoot></tfoot>
+      </table>
+    </div>
+  </div>
+
+  <div class="tableCard" id="ghatakTableCard" style="display:none;margin-top:14px;">
+    <div class="tableScroll">
+      <table id="ghatakTable">
+        <colgroup></colgroup>
+        <thead></thead>
+        <tbody id="gtbody"></tbody>
+        <tfoot></tfoot>
+      </table>
+    </div>
+  </div>
+
+  <div class="footerRow" id="examFooterRow">
+    <div class="stat">एकूण विद्यार्थी: <b id="statTotal">0</b> &nbsp;|&nbsp; पात्र: <b id="statPass" style="color:var(--pass)">0</b> &nbsp;|&nbsp; अपात्र: <b id="statFail" style="color:var(--fail)">0</b></div>
+    <div class="stat noprint">पात्रतेसाठी किमान शेकडा गुण: <input type="number" id="cutoff" value="40" style="width:56px;">%</div>
+  </div>
+
+  <div class="footerRow" id="ghatakFooterRow" style="display:none;">
+    <div class="stat">एकूण विद्यार्थी: <b id="gStatTotal">0</b></div>
+    <div class="stat">सरासरी टक्केवारी: <b id="gStatPct" style="color:var(--accent2)">0</b></div>
+  </div>
+
+</div>
+
+<!-- Bulk upload modal -->
+<div class="overlay" id="bulkOverlay">
+  <div class="modal">
+    <h3>विद्यार्थ्यांची नावे बल्क अपलोड</h3>
+    <p>प्रत्येक ओळीत एक विद्यार्थी. स्वरूप: <b>रोल क्रमांक, विद्यार्थ्याचे नाव</b> (रोल क्रमांक ऐच्छिक आहे — फक्त नाव टाकले तरी चालेल). उदा:<br>
+      5301, यश अमोल अकोलकर<br>
+      साईदीप कैलास बोरुडे
+    </p>
+    <textarea id="bulkText" placeholder="येथे नावांची यादी पेस्ट करा..."></textarea>
+    <div class="fileRow">
+      <label class="btn small" for="csvFile">📁 .csv / .txt फाईल निवडा</label>
+      <input type="file" id="csvFile" accept=".csv,.txt" style="display:none;">
+      <span id="fileName" style="font-size:.8rem;color:#6b5a3f;"></span>
+    </div>
+    <div class="modalActions">
+      <button class="btn" id="bulkCancel">रद्द करा</button>
+      <button class="btn" id="bulkAppend">यादीत जोडा</button>
+      <button class="btn primary" id="bulkReplace">संपूर्ण यादी बदला</button>
+    </div>
+  </div>
+</div>
+
+<!-- विषय / स्तंभ व्यवस्थापन modal -->
+<div class="overlay" id="subjectsOverlay">
+  <div class="modal">
+    <h3 id="subjectsModalTitle">विषय / स्तंभ व्यवस्थापित करा</h3>
+    <p>प्रत्येक विषयाचे नाव व पैकी गुण बदला, नवीन विषय/स्तंभ जोडा किंवा काढून टाका (एक्सेल प्रमाणे). हे बदल फक्त <b>सध्या उघडलेल्या इयत्ता-तुकडी व सध्याच्या टॅबला (मुख्य परीक्षा / घटक संच चाचणी)</b> लागू होतील — इतर वर्ग व दुसरा टॅब वेगळा व स्वतंत्र राहील. आधी भरलेले गुण नाव बदलल्याने नष्ट होत नाहीत.</p>
+    <div id="subjectsRows"></div>
+    <button class="btn small" id="btnAddSubject">+ नवीन विषय जोडा</button>
+    <div class="modalActions">
+      <button class="btn" id="subjectsCancel">रद्द करा</button>
+      <button class="btn primary" id="subjectsSave">जतन करा</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+/* ---------------- Data ---------------- */
+const STORAGE_KEY = 'gurukul_nikal_multi_v1';
+const STD_LIST = [
+  {std:5,  label:'पाचवी'},
+  {std:6,  label:'सहावी'},
+  {std:7,  label:'सातवी'},
+  {std:8,  label:'आठवी'},
+  {std:9,  label:'नववी'},
+  {std:10, label:'दहावी'}
+];
+const SECTION_LIST = ['अ','ब','क'];
+const EXAM_COUNT = 4; // नवीन वर्गासाठी सुरुवातीचे परीक्षा-टॅब्जची संख्या (नंतर वर्गनिहाय वाढवता येते)
+const GHATAK_COUNT = 2;
+const DEFAULT_STUDENTS = []; // विद्यार्थी यादी रिकामी — बल्क अपलोड / + विद्यार्थी जोडा वापरून भरा
+function defaultGhatakSubjects(std){
+  if(Number(std) === 5){
+    return [
+      {key:'mar', label:'मराठी', max:20},
+      {key:'hin', label:'हिंदी', max:20},
+      {key:'eng', label:'इंग्रजी', max:20},
+      {key:'gan', label:'गणित', max:20},
+      {key:'pari', label:'परिसर अभ्यास', max:20}
+    ];
+  }
+  return [
+    {key:'mar', label:'मराठी', max:20},
+    {key:'hin', label:'हिंदी', max:20},
+    {key:'eng', label:'इंग्रजी', max:20},
+    {key:'gan', label:'गणित', max:20},
+    {key:'soc', label:'समाजशास्त्र', max:20},
+    {key:'sci', label:'विज्ञान', max:20}
+  ];
+}
+
+function blankMarks(subjects){
+  const o = {};
+  (subjects || defaultExamSubjects()).forEach(s => o[s.key] = '');
+  o.shera_override = '';
+  return o;
+}
+function defaultExamSubjects(){
+  return [
+    {key:'mar', label:'मराठी', max:10},
+    {key:'eng', label:'इंग्रजी', max:10},
+    {key:'gan', label:'गणित', max:15},
+    {key:'pari1', label:'परिसर अभ्यास १', max:15},
+    {key:'pari2', label:'परिसर अभ्यास २', max:15},
+    {key:'bud', label:'बुद्धिमत्ता', max:20},
+    {key:'gk', label:'G.K', max:15}
+  ];
+}
+function blankGhatakMarks(subjects){
+  const g = {};
+  (subjects || defaultGhatakSubjects()).forEach(s => g[s.key] = '');
+  return g;
+}
+function blankGhatakSet(subjects){
+  return Array.from({length:GHATAK_COUNT}, () => blankGhatakMarks(subjects));
+}
+
+/* ---------------- Per-class-per-तुकडी (इयत्ता + तुकडी निहाय) state ---------------- */
+function makeDefaultClassState(std, sectionKey){
+  return {
+    teacher: '', className: String(std), section: sectionKey || '',
+    currentExam: 0, cutoff: 40, deleteLocked: true, subjectsLocked: true, configVersion: 7,
+    mode: 'exam', currentGhatak: 0, ghatakDates: ['', ''], examCount: EXAM_COUNT,
+    students: [], resetPassword: '', subjects: defaultExamSubjects(),
+    ghatakSubjects: defaultGhatakSubjects(std)
+  };
+}
+function makeDefaultSectionsForStd(std){
+  const secs = {};
+  SECTION_LIST.forEach(sec => { secs[sec] = makeDefaultClassState(std, sec); });
+  return secs;
+}
+function makeDefaultAllState(){
+  const classes = {};
+  STD_LIST.forEach(s => { classes[s.std] = makeDefaultSectionsForStd(s.std); });
+  return { currentStd: STD_LIST[0].std, currentSection: SECTION_LIST[0], classes };
+}
+
+function migrateClassState(std, sectionKey, cs){
+  if(!cs || !Array.isArray(cs.students)){
+    cs = makeDefaultClassState(std, sectionKey);
+  }
+  cs.deleteLocked = true; // safety: always start locked on load/refresh
+  // One-time migration: apply the updated class-teacher/इयत्ता/cutoff
+  // defaults to sessions saved before this change, without overriding
+  // any further manual edits the teacher makes after this point.
+  if(!cs.configVersion || cs.configVersion < 2){
+    cs.cutoff = 40;
+    cs.configVersion = 2;
+  }
+  // Migration: introduce घटक संच चाचणी (unit test) mode/data for
+  // sessions saved before this feature existed.
+  if(!cs.configVersion || cs.configVersion < 3){
+    cs.mode = cs.mode || 'exam';
+    cs.currentGhatak = cs.currentGhatak || 0;
+    cs.ghatakDates = cs.ghatakDates || ['', ''];
+    cs.students.forEach(st => {
+      if(!Array.isArray(st.ghatak) || st.ghatak.length !== GHATAK_COUNT){
+        st.ghatak = blankGhatakSet(defaultGhatakSubjects(std));
+      }
+    });
+    cs.configVersion = 3;
+  }
+  cs.configVersion = 5;
+  // Migration: per-class reset password field introduced later.
+  if(typeof cs.resetPassword !== 'string'){
+    cs.resetPassword = '';
+  }
+  cs.configVersion = 6;
+  // Migration: per-class customizable subject columns introduced later.
+  // Existing data (mar/gan/eng/bud keyed) keeps working as-is since the
+  // default subjects use the same keys.
+  if(!Array.isArray(cs.subjects) || cs.subjects.length === 0){
+    cs.subjects = defaultExamSubjects();
+  }
+  cs.configVersion = 7;
+  // Migration: per-class customizable घटक संच चाचणी (unit test) columns
+  // introduced later — existing data (mar/hin/eng/gan/soc/sci keyed) keeps
+  // working as-is since the default ghatak subjects use the same keys.
+  if(!Array.isArray(cs.ghatakSubjects) || cs.ghatakSubjects.length === 0){
+    cs.ghatakSubjects = defaultGhatakSubjects(std);
+  }
+  cs.configVersion = 8;
+  // Migration: per-class editable परीक्षा (exam) count introduced later —
+  // pad any student whose exams array is shorter than the class's count.
+  if(typeof cs.examCount !== 'number' || cs.examCount < 1){
+    cs.examCount = Math.max(EXAM_COUNT, cs.students.reduce((m,st) => Math.max(m, Array.isArray(st.exams)?st.exams.length:0), 0));
+  }
+  cs.students.forEach(st => {
+    if(!Array.isArray(st.exams)) st.exams = [];
+    while(st.exams.length < cs.examCount) st.exams.push(blankMarks(cs.subjects));
+  });
+  cs.configVersion = 9;
+  // Migration: इ. ५ वी साठी घटक चाचणीत समाजशास्त्र + विज्ञान ऐवजी एकत्रित
+  // "परिसर अभ्यास" विषय. आधीच 'pari' विषय जोडलेला असल्यास पुन्हा बदलत नाही.
+  if((!cs.configVersion || cs.configVersion < 10) && Number(std) === 5){
+    const hasSoc = cs.ghatakSubjects.some(s => s.key === 'soc');
+    const hasSci = cs.ghatakSubjects.some(s => s.key === 'sci');
+    const hasPari = cs.ghatakSubjects.some(s => s.key === 'pari');
+    if((hasSoc || hasSci) && !hasPari){
+      const idx = cs.ghatakSubjects.findIndex(s => s.key === 'soc' || s.key === 'sci');
+      cs.ghatakSubjects = cs.ghatakSubjects.filter(s => s.key !== 'soc' && s.key !== 'sci');
+      cs.ghatakSubjects.splice(idx, 0, {key:'pari', label:'परिसर अभ्यास', max:20});
+      cs.students.forEach(st => {
+        (st.ghatak || []).forEach(g => {
+          delete g.soc; delete g.sci;
+          if(g.pari === undefined) g.pari = '';
+        });
+      });
+    }
+  }
+  cs.configVersion = 10;
+  // Migration: मुख्य परीक्षा विषय व गुणभार पूर्ण नव्याने ठरवले —
+  // मराठी(10), इंग्रजी(10), गणित(15), परिसर अभ्यास १(15),
+  // परिसर अभ्यास २(15), बुद्धिमत्ता(20), G.K(15). जुना साचा बदलून
+  // हा नवीन साचा सर्व वर्ग-तुकड्यांना एकदाच लागू केला जातो; आधीचे
+  // गुण (मराठी/इंग्रजी/गणित/बुद्धिमत्ता) की-नुसार तसेच राहतात.
+  if(!cs.configVersion || cs.configVersion < 11){
+    cs.subjects = defaultExamSubjects();
+    cs.students.forEach(st => {
+      (st.exams || []).forEach(ex => {
+        cs.subjects.forEach(s => { if(ex[s.key] === undefined) ex[s.key] = ''; });
+      });
+    });
+  }
+  cs.configVersion = 11;
+  // Migration: विषयांचे पैकी गुण (100 एकूण) आता निश्चित झाले — चुकून
+  // बदलले जाऊ नयेत म्हणून डीफॉल्ट लॉक स्थितीत ठेवले जातात. आधीच कुणी
+  // उघडपणे अनलॉक केले असेल तर ती निवड कायम राहते.
+  if(typeof cs.subjectsLocked !== 'boolean'){
+    cs.subjectsLocked = true;
+  }
+  cs.configVersion = 12;
+  return cs;
+}
+
+function migrateStdEntry(std, entry){
+  // Old data (before तुकडी अ/ब/क existed) stored one flat class-state per
+  // इयत्ता directly. If we see that shape, wrap it into तुकडी 'अ' so no
+  // existing marks are lost, and create empty ब/क तुकड्या alongside it.
+  if(entry && Array.isArray(entry.students)){
+    const wrapped = makeDefaultSectionsForStd(std);
+    wrapped[SECTION_LIST[0]] = migrateClassState(std, SECTION_LIST[0], entry);
+    if(!wrapped[SECTION_LIST[0]].section) wrapped[SECTION_LIST[0]].section = SECTION_LIST[0];
+    return wrapped;
+  }
+  const secs = (entry && typeof entry === 'object') ? entry : {};
+  SECTION_LIST.forEach(sec => { secs[sec] = migrateClassState(std, sec, secs[sec]); });
+  return secs;
+}
+
+function loadState(){
+  try{
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if(raw){
+      const parsed = JSON.parse(raw);
+      if(parsed && parsed.classes && typeof parsed.classes === 'object'){
+        STD_LIST.forEach(s => {
+          parsed.classes[s.std] = migrateStdEntry(s.std, parsed.classes[s.std]);
+        });
+        if(!STD_LIST.some(s => s.std === parsed.currentStd)){
+          parsed.currentStd = STD_LIST[0].std;
+        }
+        if(!SECTION_LIST.includes(parsed.currentSection)){
+          parsed.currentSection = SECTION_LIST[0];
+        }
+        return parsed;
+      }
+    }
+  }catch(e){ console.warn('load failed', e); }
+  return makeDefaultAllState();
+}
+
+let allState = loadState();
+let state = allState.classes[allState.currentStd][allState.currentSection];
+
+function saveState(){
+  allState._updatedAt = Date.now();
+  try{ localStorage.setItem(STORAGE_KEY, JSON.stringify(allState)); }
+  catch(e){ console.warn('save failed', e); }
+  schedulePush();
+}
+
+/* ---------------- Helpers ---------------- */
+function num(v){
+  if(v === '' || v === null || v === undefined) return null;
+  const s = String(v).trim();
+  if(s === '' ) return null;
+  if(s.toUpperCase() === 'AB') return 'AB';
+  const n = parseFloat(s);
+  return isNaN(n) ? null : n;
+}
+function sumOrAB(a,b){
+  if(a === 'AB' && b === 'AB') return 'AB';
+  const an = (a === 'AB' || a === null) ? 0 : a;
+  const bn = (b === 'AB' || b === null) ? 0 : b;
+  if(a === null && b === null) return null;
+  return an+bn;
+}
+function fmt(v, d=2){
+  if(v === null || v === undefined) return '';
+  if(v === 'AB') return 'AB';
+  const n = Math.round(v*100)/100;
+  return (Math.round(n) === n) ? String(n) : n.toFixed(d).replace(/0+$/,'').replace(/\.$/,'');
+}
+
+function hasCombinedMarGan(subjects){
+  return subjects.some(s=>s.key==='mar') && subjects.some(s=>s.key==='gan');
+}
+function combinedInsertAfterKey(subjects){
+  const marIdx = subjects.findIndex(s=>s.key==='mar');
+  const ganIdx = subjects.findIndex(s=>s.key==='gan');
+  if(marIdx===-1 || ganIdx===-1) return null;
+  return marIdx>ganIdx ? 'mar' : 'gan';
+}
+function combinedMarGanMax(subjects){
+  const m = subjects.find(s=>s.key==='mar'); const g = subjects.find(s=>s.key==='gan');
+  return (m?Number(m.max)||0:0) + (g?Number(g.max)||0:0);
+}
+function combinedMarGanVal(ex){
+  return sumOrAB(num(ex ? ex['mar'] : ''), num(ex ? ex['gan'] : ''));
+}
+
+function computeRow(ex, subjects){
+  subjects = subjects || defaultExamSubjects();
+  const vals = subjects.map(s => num(ex ? ex[s.key] : ''));
+  const anyVal = vals.some(v => v !== null);
+  const allAB = vals.length>0 && vals.every(v => v === 'AB');
+  const maxTotal = subjects.reduce((a,s) => a + (Number(s.max)||0), 0);
+  let total = null;
+  if(anyVal){
+    if(allAB) total = 'AB';
+    else {
+      total = 0;
+      vals.forEach(v => { if(v !== null && v !== 'AB') total += v; });
+    }
+  }
+  let pct = null;
+  if(total !== 'AB' && total !== null && maxTotal > 0){ pct = (total/maxTotal)*100; }
+  let shera = '';
+  if(total === 'AB'){ shera = 'अनुपस्थित'; }
+  else if(pct !== null){ shera = pct >= (state.cutoff||40) ? 'पात्र' : 'अपात्र'; }
+  return { vals, total, pct, shera, maxTotal };
+}
+
+function computeGhatakRow(g, subjects){
+  subjects = subjects || defaultGhatakSubjects();
+  const raw = {}; let anyVal = false, allAB = true;
+  subjects.forEach(s => {
+    const v = num(g ? g[s.key] : '');
+    raw[s.key] = v;
+    if(v !== null) anyVal = true;
+    if(v !== 'AB') allAB = false;
+  });
+  const maxTotal = subjects.reduce((a,s) => a + (Number(s.max)||0), 0);
+  if(!anyVal) return { ...raw, total:null, pct:null, maxTotal };
+  if(allAB) return { ...raw, total:'AB', pct:null, maxTotal };
+  let total = 0;
+  subjects.forEach(s => { const v = raw[s.key]; if(v !== null && v !== 'AB') total += v; });
+  const pct = maxTotal > 0 ? (total/maxTotal)*100 : null;
+  return { ...raw, total, pct, maxTotal };
+}
+
+/* ---------------- Rendering ---------------- */
+const tbody = document.getElementById('tbody');
+const gtbody = document.getElementById('gtbody');
+const examTabs = document.getElementById('examTabs');
+const ghatakTabs = document.getElementById('ghatakTabs');
+const modeTabs = document.getElementById('modeTabs');
+const stdTabsEl = document.getElementById('stdTabs');
+const examTitleBadge = document.getElementById('examTitleBadge');
+
+function renderExamTabs(){
+  examTabs.innerHTML = '';
+  for(let i=0;i<state.examCount;i++){
+    const b = document.createElement('button');
+    b.textContent = 'परीक्षा ' + (i+1);
+    if(i === state.currentExam) b.classList.add('active');
+    b.addEventListener('click', () => { state.currentExam = i; saveState(); renderAll(); });
+    examTabs.appendChild(b);
+  }
+}
+
+const GHATAK_LABELS = ['1', '2'];
+function renderGhatakTabs(){
+  ghatakTabs.innerHTML = '';
+  for(let i=0;i<GHATAK_COUNT;i++){
+    const b = document.createElement('button');
+    b.textContent = 'घटक संच चाचणी ' + GHATAK_LABELS[i];
+    if(i === state.currentGhatak) b.classList.add('active');
+    b.addEventListener('click', () => { state.currentGhatak = i; saveState(); renderAll(); });
+    ghatakTabs.appendChild(b);
+  }
+  document.getElementById('ghatakDate').value = state.ghatakDates[state.currentGhatak] || '';
+}
+
+function renderStdTabs(){
+  stdTabsEl.innerHTML = '';
+  STD_LIST.forEach(s => {
+    const b = document.createElement('button');
+    b.textContent = s.label;
+    if(s.std === allState.currentStd) b.classList.add('active');
+    b.addEventListener('click', () => {
+      if(allState.currentStd === s.std) return;
+      allState.currentStd = s.std;
+      state = allState.classes[s.std][allState.currentSection];
+      saveState(); renderAll();
+      onClassSwitched();
+    });
+    stdTabsEl.appendChild(b);
+  });
+}
+
+const sectionTabsEl = document.getElementById('sectionTabs');
+function renderSectionTabs(){
+  sectionTabsEl.innerHTML = '';
+  SECTION_LIST.forEach(sec => {
+    const b = document.createElement('button');
+    b.textContent = 'तुकडी ' + sec;
+    if(sec === allState.currentSection) b.classList.add('active');
+    b.addEventListener('click', () => {
+      if(allState.currentSection === sec) return;
+      allState.currentSection = sec;
+      state = allState.classes[allState.currentStd][sec];
+      saveState(); renderAll();
+      onClassSwitched();
+    });
+    sectionTabsEl.appendChild(b);
+  });
+}
+
+function renderModeTabs(){
+  modeTabs.innerHTML = '';
+  const modes = [ ['exam','मुख्य परीक्षा'], ['ghatak','घटक संच चाचणी'] ];
+  modes.forEach(([key,label]) => {
+    const b = document.createElement('button');
+    b.textContent = label;
+    if(state.mode === key) b.classList.add('active');
+    b.addEventListener('click', () => { state.mode = key; saveState(); renderAll(); });
+    modeTabs.appendChild(b);
+  });
+  document.getElementById('examTabsRow').style.display = state.mode === 'exam' ? 'flex' : 'none';
+  document.getElementById('ghatakTabsRow').style.display = state.mode === 'ghatak' ? 'flex' : 'none';
+  document.getElementById('examTableCard').style.display = state.mode === 'exam' ? '' : 'none';
+  document.getElementById('ghatakTableCard').style.display = state.mode === 'ghatak' ? '' : 'none';
+  document.getElementById('examFooterRow').style.display = state.mode === 'exam' ? 'flex' : 'none';
+  document.getElementById('ghatakFooterRow').style.display = state.mode === 'ghatak' ? 'flex' : 'none';
+  document.getElementById('karmveerLine').style.display = state.mode === 'exam' ? '' : 'none';
+  document.getElementById('gurukulLine').style.display = state.mode === 'exam' ? '' : 'none';
+}
+
+function renderHeaderFields(){
+  const curStd = STD_LIST.find(s => s.std === allState.currentStd);
+  if(curStd) document.title = 'रयत गुरुकुल प्रकल्प - निकाल पत्रक (इयत्ता ' + curStd.label + ' - तुकडी ' + allState.currentSection + ')';
+  document.getElementById('teacherName').value = state.teacher;
+  document.getElementById('className').value = state.className;
+  document.getElementById('section').value = state.section;
+  document.getElementById('cutoff').value = state.cutoff;
+  if(state.mode === 'ghatak'){
+    let txt = 'घटक संच चाचणी क्रमांक ' + GHATAK_LABELS[state.currentGhatak] + ' निकाल';
+    const d = state.ghatakDates[state.currentGhatak];
+    if(d){
+      const parts = d.split('-'); // yyyy-mm-dd -> dd/mm/yyyy
+      const nice = parts.length===3 ? (parts[2]+'/'+parts[1]+'/'+parts[0]) : d;
+      txt += ' (दि. ' + nice + ')';
+    }
+    examTitleBadge.textContent = txt;
+  } else {
+    examTitleBadge.textContent = 'विशेष सराव परीक्षा क्रमांक - ' + (state.currentExam+1) + ' निकाल';
+  }
+
+  const classSectionLine = document.getElementById('classSectionLine');
+  const clsTxt = (state.className || '').toString().trim();
+  const secTxt = (state.section || '').toString().trim();
+  if(clsTxt || secTxt){
+    classSectionLine.textContent = 'इयत्ता : ' + clsTxt + (secTxt ? '   तुकडी : ' + secTxt : '');
+    classSectionLine.style.display = '';
+  } else {
+    classSectionLine.style.display = 'none';
+  }
+
+  const teacherLine = document.getElementById('teacherLine');
+  const teacherTxt = (state.teacher || '').toString().trim();
+  if(teacherTxt){
+    teacherLine.textContent = 'वर्गशिक्षक : ' + teacherTxt;
+    teacherLine.style.display = '';
+  } else {
+    teacherLine.style.display = 'none';
+  }
+}
+
+function renderTable(){
+  if(state.mode === 'ghatak'){ renderGhatakTable(); return; }
+  renderExamTable();
+}
+
+function escText(el, text){ el.textContent = text; return el; }
+
+function renderExamTableStructure(){
+  const table = document.getElementById('mainTable');
+  const colgroup = table.querySelector('colgroup');
+  const thead = table.querySelector('thead');
+  const tfoot = table.querySelector('tfoot');
+  colgroup.innerHTML = ''; thead.innerHTML = ''; tfoot.innerHTML = '';
+
+  const subjects = state.subjects;
+  const maxTotal = subjects.reduce((a,s) => a + (Number(s.max)||0), 0);
+  const combCount = hasCombinedMarGan(subjects) ? 1 : 0;
+  const subjW = (subjects.length+combCount) ? Math.max(5, 52/(subjects.length+combCount)).toFixed(2)+'%' : '6.5%';
+
+  const mkCol = (cls) => { const c = document.createElement('col'); c.className = cls; return c; };
+  colgroup.appendChild(mkCol('c-no'));
+  colgroup.appendChild(mkCol('c-roll'));
+  colgroup.appendChild(mkCol('c-name'));
+  const insAfter = combinedInsertAfterKey(subjects);
+  subjects.forEach(s => {
+    const c = mkCol('c-subj'); c.style.width = subjW; colgroup.appendChild(c);
+    if(insAfter && s.key === insAfter){ const cc = mkCol('c-subj c-comb'); cc.style.width = subjW; colgroup.appendChild(cc); }
+  });
+  colgroup.appendChild(mkCol('c-tot'));
+  colgroup.appendChild(mkCol('c-pct'));
+  colgroup.appendChild(mkCol('c-shera'));
+  colgroup.appendChild(mkCol('c-del'));
+
+  const tr = document.createElement('tr'); tr.className = 'top';
+  ['अ.नं.','रोल क्र.','विद्यार्थ्याचे नाव'].forEach(h => { const th=document.createElement('th'); th.textContent=h; tr.appendChild(th); });
+  subjects.forEach(s => {
+    const th = document.createElement('th');
+    th.appendChild(document.createTextNode(s.label));
+    th.appendChild(document.createElement('br'));
+    const maxWrap = document.createElement('span');
+    maxWrap.className = 'maxWrap';
+    maxWrap.appendChild(document.createTextNode('('));
+    const maxInp = document.createElement('input');
+    maxInp.type = 'number'; maxInp.min = '1'; maxInp.className = 'maxHeadInp';
+    maxInp.value = s.max;
+    if(state.subjectsLocked !== false){
+      maxInp.disabled = true;
+      maxInp.classList.add('locked');
+      maxInp.title = 'पैकी गुण लॉक आहेत — बदलण्यासाठी वर "🔒 विषय गुण" बटण दाबून अनलॉक करा';
+    } else {
+      maxInp.title = 'पैकी गुण बदलण्यासाठी येथे टाइप करा';
+    }
+    maxInp.addEventListener('click', e => e.stopPropagation());
+    maxInp.addEventListener('change', e => {
+      const v = Number(e.target.value);
+      if(!v || v <= 0){ showToast('योग्य पैकी गुण द्या'); maxInp.value = s.max; return; }
+      s.max = v;
+      saveState();
+      renderTable();
+      updateFooterAndStats();
+    });
+    maxWrap.appendChild(maxInp);
+    maxWrap.appendChild(document.createTextNode(')'));
+    th.appendChild(maxWrap);
+    tr.appendChild(th);
+    if(insAfter && s.key === insAfter){
+      const thComb = document.createElement('th');
+      thComb.appendChild(document.createTextNode('मराठी+गणित'));
+      thComb.appendChild(document.createElement('br'));
+      thComb.appendChild(document.createTextNode('(एकत्रित '+combinedMarGanMax(subjects)+')'));
+      tr.appendChild(thComb);
+    }
+  });
+  const thTot = document.createElement('th');
+  thTot.appendChild(document.createTextNode('एकूण')); thTot.appendChild(document.createElement('br'));
+  thTot.appendChild(document.createTextNode('('+maxTotal+')'));
+  tr.appendChild(thTot);
+  tr.appendChild(escText(document.createElement('th'), 'शेकडा गुण'));
+  tr.appendChild(escText(document.createElement('th'), 'शेरा'));
+  tr.appendChild(document.createElement('th'));
+  thead.appendChild(tr);
+
+  const trf = document.createElement('tr');
+  const tdLabel = document.createElement('td'); tdLabel.colSpan = 3; tdLabel.textContent = 'एकूण / सरासरी'; trf.appendChild(tdLabel);
+  subjects.forEach(s => { const td = document.createElement('td'); td.id = 'fSubj_'+s.key; td.textContent = '0'; trf.appendChild(td);
+    if(insAfter && s.key === insAfter){ trf.appendChild(escText(Object.assign(document.createElement('td'), {id:'fSubjCombined'}), '0')); }
+  });
+  trf.appendChild(escText(Object.assign(document.createElement('td'), {id:'fTot'}), '0'));
+  trf.appendChild(escText(Object.assign(document.createElement('td'), {id:'fPct'}), '0'));
+  const tdRest = document.createElement('td'); tdRest.colSpan = 2; trf.appendChild(tdRest);
+  tfoot.appendChild(trf);
+}
+
+function renderExamTable(){
+  renderExamTableStructure();
+  tbody.innerHTML = '';
+  const ci = state.currentExam;
+  const subjects = state.subjects;
+  let sums = {}; subjects.forEach(s => sums[s.key] = 0);
+  let totSum = 0, pctSum = 0, pctCount = 0, passC=0, failC=0, combSum = 0;
+
+  state.students.forEach((st, idx) => {
+    const ex = st.exams[ci];
+
+    const tr = document.createElement('tr');
+
+    const tdNo = document.createElement('td'); tdNo.textContent = idx+1; tr.appendChild(tdNo);
+
+    const tdRoll = document.createElement('td');
+    const rollInput = document.createElement('input');
+    rollInput.type = 'text'; rollInput.className='markbox'; rollInput.style.width='64px';
+    rollInput.value = st.roll ?? '';
+    rollInput.addEventListener('change', e => { st.roll = e.target.value; saveState(); });
+    tdRoll.appendChild(rollInput);
+    tr.appendChild(tdRoll);
+
+    const tdName = document.createElement('td'); tdName.className='name';
+    const nameInput = document.createElement('input');
+    nameInput.type='text'; nameInput.className='namebox'; nameInput.value = st.name;
+    nameInput.addEventListener('input', e => { st.name = e.target.value; });
+    nameInput.addEventListener('change', () => saveState());
+    tdName.appendChild(nameInput);
+    tr.appendChild(tdName);
+
+    const tdTot = document.createElement('td'); tdTot.className='calc';
+    const tdPct = document.createElement('td'); tdPct.className='calc pct';
+    const tdShera = document.createElement('td');
+    const showComb = hasCombinedMarGan(subjects);
+    const insAfter = combinedInsertAfterKey(subjects);
+    const tdComb = showComb ? document.createElement('td') : null;
+    if(tdComb) tdComb.className = 'calc';
+
+    function refreshRow(){
+      const c = computeRow(ex, subjects);
+      tdTot.textContent = fmt(c.total);
+      tdPct.textContent = c.pct===null ? (c.total==='AB'?'AB':'') : fmt(c.pct,1)+'%';
+      if(c.shera === 'पात्र') tdShera.innerHTML = '<span class="tag pat">पात्र</span>';
+      else if(c.shera === 'अपात्र') tdShera.innerHTML = '<span class="tag apat">अपात्र</span>';
+      else if(c.shera === 'अनुपस्थित') tdShera.innerHTML = '<span class="tag apat">अनुपस्थित</span>';
+      else tdShera.innerHTML = '';
+      if(tdComb){ const cv = combinedMarGanVal(ex); tdComb.textContent = cv===null ? '' : fmt(cv); }
+      return c;
+    }
+
+    subjects.forEach(s => {
+      const td = document.createElement('td');
+      const inp = document.createElement('input');
+      inp.type='text'; inp.className='markbox'; inp.value = ex[s.key] ?? '';
+      inp.placeholder = '/'+s.max;
+      inp.addEventListener('input', e => {
+        ex[s.key] = e.target.value;
+        refreshRow();
+        updateFooterAndStats();
+      });
+      inp.addEventListener('change', () => saveState());
+      td.appendChild(inp);
+      tr.appendChild(td);
+      if(tdComb && insAfter && s.key === insAfter){ tr.appendChild(tdComb); }
+    });
+
+    const c = refreshRow();
+    tr.appendChild(tdTot); tr.appendChild(tdPct); tr.appendChild(tdShera);
+    if(c.shera === 'पात्र') passC++;
+    else if(c.shera === 'अपात्र' || c.shera === 'अनुपस्थित') failC++;
+
+    const tdDel = document.createElement('td');
+    const del = document.createElement('span'); del.className='rowdel';
+    if(state.deleteLocked){
+      del.textContent = '🔒';
+      del.classList.add('locked');
+      del.title = 'विद्यार्थी हटवणे बंद आहे — आधी वरील "हटवणे" बटण दाबून चालू करा';
+      del.addEventListener('click', () => showToast('विद्यार्थी हटवणे सध्या बंद आहे — वरील बटण दाबून चालू करा'));
+    } else {
+      del.textContent = '✕';
+      del.title = 'विद्यार्थी काढा';
+      del.addEventListener('click', () => {
+        if(confirm(st.name + ' यास यादीतून काढायचे का?')){
+          state.students.splice(idx,1); saveState(); renderAll();
+        }
+      });
+    }
+    tdDel.appendChild(del);
+    tr.appendChild(tdDel);
+
+    tbody.appendChild(tr);
+
+    subjects.forEach((s,i) => { const v = c.vals[i]; if(v !== null && v !== 'AB') sums[s.key] += v; });
+    if(typeof c.total === 'number') totSum += c.total;
+    if(c.pct !== null){ pctSum += c.pct; pctCount++; }
+    if(showComb){ const cv = combinedMarGanVal(ex); if(typeof cv === 'number') combSum += cv; }
+  });
+
+  subjects.forEach(s => { const el = document.getElementById('fSubj_'+s.key); if(el) el.textContent = fmt(sums[s.key]); });
+  if(showComb){ const elFComb = document.getElementById('fSubjCombined'); if(elFComb) elFComb.textContent = fmt(combSum); }
+  { const elFTot = document.getElementById('fTot'); if(elFTot) elFTot.textContent = fmt(totSum); }
+  { const elFPct = document.getElementById('fPct'); if(elFPct) elFPct.textContent = pctCount ? fmt(pctSum/pctCount,1)+'%' : '0'; }
+
+  document.getElementById('statTotal').textContent = state.students.length;
+  document.getElementById('statPass').textContent = passC;
+  document.getElementById('statFail').textContent = failC;
+}
+
+function renderGhatakTableStructure(){
+  const table = document.getElementById('ghatakTable');
+  const colgroup = table.querySelector('colgroup');
+  const thead = table.querySelector('thead');
+  const tfoot = table.querySelector('tfoot');
+  colgroup.innerHTML = ''; thead.innerHTML = ''; tfoot.innerHTML = '';
+
+  const subjects = state.ghatakSubjects;
+  const maxTotal = subjects.reduce((a,s) => a + (Number(s.max)||0), 0);
+  const subjW = subjects.length ? Math.max(5, 52/subjects.length).toFixed(2)+'%' : '8.5%';
+
+  const mkCol = (cls) => { const c = document.createElement('col'); c.className = cls; return c; };
+  colgroup.appendChild(mkCol('g-no'));
+  colgroup.appendChild(mkCol('g-roll'));
+  colgroup.appendChild(mkCol('g-name'));
+  subjects.forEach(() => { const c = mkCol('g-sub'); c.style.width = subjW; colgroup.appendChild(c); });
+  colgroup.appendChild(mkCol('g-tot'));
+  colgroup.appendChild(mkCol('g-pct'));
+  colgroup.appendChild(mkCol('g-del'));
+
+  const tr = document.createElement('tr'); tr.className = 'top';
+  ['अ.नं.','रोल क्र.','विद्यार्थ्याचे नाव'].forEach(h => { const th=document.createElement('th'); th.textContent=h; tr.appendChild(th); });
+  subjects.forEach(s => {
+    const th = document.createElement('th');
+    th.appendChild(document.createTextNode(s.label));
+    th.appendChild(document.createElement('br'));
+    th.appendChild(document.createTextNode('('+s.max+')'));
+    tr.appendChild(th);
+  });
+  const thTot = document.createElement('th');
+  thTot.appendChild(document.createTextNode('एकूण')); thTot.appendChild(document.createElement('br'));
+  thTot.appendChild(document.createTextNode('('+maxTotal+')'));
+  tr.appendChild(thTot);
+  tr.appendChild(escText(document.createElement('th'), 'टक्केवारी'));
+  tr.appendChild(document.createElement('th'));
+  thead.appendChild(tr);
+
+  const trf = document.createElement('tr');
+  const tdLabel = document.createElement('td'); tdLabel.colSpan = 3; tdLabel.textContent = 'एकूण / सरासरी'; trf.appendChild(tdLabel);
+  subjects.forEach(s => { const td = document.createElement('td'); td.id = 'gfSubj_'+s.key; td.textContent = '0'; trf.appendChild(td); });
+  trf.appendChild(escText(Object.assign(document.createElement('td'), {id:'gfTot'}), '0'));
+  trf.appendChild(escText(Object.assign(document.createElement('td'), {id:'gfPct'}), '0'));
+  const tdRest = document.createElement('td'); trf.appendChild(tdRest);
+  tfoot.appendChild(trf);
+}
+
+function renderGhatakTable(){
+  renderGhatakTableStructure();
+  gtbody.innerHTML = '';
+  const gi = state.currentGhatak;
+  const subjects = state.ghatakSubjects;
+  let sums = {}; subjects.forEach(s => sums[s.key] = 0);
+  let totSum = 0, pctSum = 0, pctCount = 0;
+
+  state.students.forEach((st, idx) => {
+    const g = st.ghatak[gi];
+    const c = computeGhatakRow(g, subjects);
+    const tr = document.createElement('tr');
+
+    const tdNo = document.createElement('td'); tdNo.textContent = idx+1; tr.appendChild(tdNo);
+
+    const tdRoll = document.createElement('td');
+    const rollInput = document.createElement('input');
+    rollInput.type='text'; rollInput.className='markbox'; rollInput.style.width='64px';
+    rollInput.value = st.roll ?? '';
+    rollInput.addEventListener('change', e => { st.roll = e.target.value; saveState(); });
+    tdRoll.appendChild(rollInput);
+    tr.appendChild(tdRoll);
+
+    const tdName = document.createElement('td'); tdName.className='name';
+    const nameInput = document.createElement('input');
+    nameInput.type='text'; nameInput.className='namebox'; nameInput.value = st.name;
+    nameInput.addEventListener('input', e => { st.name = e.target.value; });
+    nameInput.addEventListener('change', () => saveState());
+    tdName.appendChild(nameInput);
+    tr.appendChild(tdName);
+
+    subjects.forEach(s => {
+      const td = document.createElement('td');
+      const inp = document.createElement('input');
+      inp.type='text'; inp.className='markbox'; inp.value = g[s.key] ?? '';
+      inp.placeholder = '/'+s.max;
+      inp.addEventListener('input', e => {
+        g[s.key] = e.target.value;
+        updateFooterAndStats();
+        refreshGhatakRowCalc(tr, g, subjects);
+      });
+      inp.addEventListener('change', () => saveState());
+      td.appendChild(inp);
+      tr.appendChild(td);
+    });
+
+    const tdTot = document.createElement('td'); tdTot.className='calc'; tdTot.textContent = fmt(c.total); tr.appendChild(tdTot);
+    const tdPct = document.createElement('td'); tdPct.className='calc pct';
+    tdPct.textContent = c.pct===null ? (c.total==='AB'?'AB':'') : fmt(c.pct,1)+'%';
+    tr.appendChild(tdPct);
+
+    const tdDel = document.createElement('td');
+    const del = document.createElement('span'); del.className='rowdel';
+    if(state.deleteLocked){
+      del.textContent = '🔒';
+      del.classList.add('locked');
+      del.title = 'विद्यार्थी हटवणे बंद आहे — आधी वरील "हटवणे" बटण दाबून चालू करा';
+      del.addEventListener('click', () => showToast('विद्यार्थी हटवणे सध्या बंद आहे — वरील बटण दाबून चालू करा'));
+    } else {
+      del.textContent = '✕';
+      del.title = 'विद्यार्थी काढा';
+      del.addEventListener('click', () => {
+        if(confirm(st.name + ' यास यादीतून काढायचे का?')){
+          state.students.splice(idx,1); saveState(); renderAll();
+        }
+      });
+    }
+    tdDel.appendChild(del);
+    tr.appendChild(tdDel);
+
+    gtbody.appendChild(tr);
+
+    subjects.forEach(s => { if(c[s.key] !== null && c[s.key] !== 'AB') sums[s.key] += c[s.key]; });
+    if(typeof c.total === 'number') totSum += c.total;
+    if(c.pct !== null){ pctSum += c.pct; pctCount++; }
+  });
+
+  subjects.forEach(s => { const el = document.getElementById('gfSubj_'+s.key); if(el) el.textContent = fmt(sums[s.key]); });
+  { const elGfTot = document.getElementById('gfTot'); if(elGfTot) elGfTot.textContent = fmt(totSum); }
+  { const elGfPct = document.getElementById('gfPct'); if(elGfPct) elGfPct.textContent = pctCount ? fmt(pctSum/pctCount,1)+'%' : '0'; }
+
+  document.getElementById('gStatTotal').textContent = state.students.length;
+  document.getElementById('gStatPct').textContent = pctCount ? fmt(pctSum/pctCount,1)+'%' : '0';
+}
+
+function refreshGhatakRowCalc(tr, g, subjects){
+  const c = computeGhatakRow(g, subjects);
+  const tds = tr.querySelectorAll('td.calc');
+  tds[0].textContent = fmt(c.total);
+  tds[1].textContent = c.pct===null ? (c.total==='AB'?'AB':'') : fmt(c.pct,1)+'%';
+}
+
+function updateFooterAndStats(){
+  if(state.mode === 'ghatak'){ updateGhatakFooterAndStats(); return; }
+  // cheap full recompute for footer + stats without full DOM rebuild of rows
+  const ci = state.currentExam;
+  const subjects = state.subjects;
+  let sums = {}; subjects.forEach(s => sums[s.key] = 0);
+  let totSum = 0, pctSum = 0, pctCount = 0;
+  let passC=0, failC=0, combSum = 0;
+  const showComb = hasCombinedMarGan(subjects);
+  state.students.forEach(st => {
+    const c = computeRow(st.exams[ci], subjects);
+    subjects.forEach((s,i) => { const v = c.vals[i]; if(v !== null && v !== 'AB') sums[s.key] += v; });
+    if(typeof c.total === 'number') totSum += c.total;
+    if(c.pct !== null){ pctSum += c.pct; pctCount++; }
+    if(c.shera === 'पात्र') passC++;
+    else if(c.shera === 'अपात्र' || c.shera==='अनुपस्थित') failC++;
+    if(showComb){ const cv = combinedMarGanVal(st.exams[ci]); if(typeof cv === 'number') combSum += cv; }
+  });
+  subjects.forEach(s => { const el = document.getElementById('fSubj_'+s.key); if(el) el.textContent = fmt(sums[s.key]); });
+  if(showComb){ const elFComb = document.getElementById('fSubjCombined'); if(elFComb) elFComb.textContent = fmt(combSum); }
+  { const elFTot = document.getElementById('fTot'); if(elFTot) elFTot.textContent = fmt(totSum); }
+  { const elFPct = document.getElementById('fPct'); if(elFPct) elFPct.textContent = pctCount ? fmt(pctSum/pctCount,1)+'%' : '0'; }
+  document.getElementById('statPass').textContent = passC;
+  document.getElementById('statFail').textContent = failC;
+}
+
+function updateGhatakFooterAndStats(){
+  const gi = state.currentGhatak;
+  const subjects = state.ghatakSubjects;
+  let sums = {}; subjects.forEach(s => sums[s.key] = 0);
+  let totSum = 0, pctSum = 0, pctCount = 0;
+  state.students.forEach(st => {
+    const c = computeGhatakRow(st.ghatak[gi], subjects);
+    subjects.forEach(s => { if(c[s.key] !== null && c[s.key] !== 'AB') sums[s.key] += c[s.key]; });
+    if(typeof c.total === 'number') totSum += c.total;
+    if(c.pct !== null){ pctSum += c.pct; pctCount++; }
+  });
+  subjects.forEach(s => { const el = document.getElementById('gfSubj_'+s.key); if(el) el.textContent = fmt(sums[s.key]); });
+  { const elGfTot = document.getElementById('gfTot'); if(elGfTot) elGfTot.textContent = fmt(totSum); }
+  { const elGfPct = document.getElementById('gfPct'); if(elGfPct) elGfPct.textContent = pctCount ? fmt(pctSum/pctCount,1)+'%' : '0'; }
+  document.getElementById('gStatPct').textContent = pctCount ? fmt(pctSum/pctCount,1)+'%' : '0';
+}
+
+function renderAll(){
+  renderStdTabs();
+  renderSectionTabs();
+  renderModeTabs();
+  renderExamTabs();
+  renderGhatakTabs();
+  renderHeaderFields();
+  renderDelLockBtn();
+  renderSubjLockBtn();
+  renderTable();
+}
+
+/* ---------------- Toast ---------------- */
+let toastTimer;
+function showToast(msg){
+  const t = document.getElementById('toast');
+  t.textContent = msg; t.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(()=> t.classList.remove('show'), 2200);
+}
+
+/* ---------------- Header field events ---------------- */
+document.getElementById('teacherName').addEventListener('change', e => { state.teacher = e.target.value; saveState(); });
+document.getElementById('className').addEventListener('change', e => { state.className = e.target.value; saveState(); });
+document.getElementById('section').addEventListener('change', e => { state.section = e.target.value; saveState(); });
+document.getElementById('cutoff').addEventListener('change', e => {
+  const v = parseFloat(e.target.value); state.cutoff = isNaN(v)?40:v; saveState(); renderTable();
+});
+document.getElementById('ghatakDate').addEventListener('change', e => {
+  state.ghatakDates[state.currentGhatak] = e.target.value; saveState(); renderHeaderFields();
+});
+
+/* ---------------- Add row ---------------- */
+document.getElementById('btnAddRow').addEventListener('click', () => {
+  const maxNo = state.students.reduce((m,s)=>Math.max(m, s.no||0), 0);
+  const maxRoll = state.students.reduce((m,s)=>Math.max(m, Number(s.roll)||0), 0);
+  const newStu = {
+    id: 'S'+Date.now(), no: maxNo+1, roll: maxRoll+1 || '', name: '',
+    exams: Array.from({length:state.examCount}, () => blankMarks(state.subjects)),
+    ghatak: blankGhatakSet(state.ghatakSubjects)
+  };
+  state.students.push(newStu);
+  saveState(); renderAll();
+  showToast('नवीन विद्यार्थी जोडला');
+});
+
+/* ---------------- Add new exam (परीक्षा) — प्रत्येक वर्गासाठी स्वतंत्र ---------------- */
+document.getElementById('btnAddExam').addEventListener('click', () => {
+  state.examCount = (state.examCount || EXAM_COUNT) + 1;
+  state.students.forEach(st => {
+    if(!Array.isArray(st.exams)) st.exams = [];
+    while(st.exams.length < state.examCount) st.exams.push(blankMarks(state.subjects));
+  });
+  state.currentExam = state.examCount - 1;
+  saveState(); renderAll();
+  showToast('✅ नवीन "परीक्षा ' + state.examCount + '" जोडली (फक्त सध्याच्या इयत्ता-तुकडीसाठी)');
+});
+
+/* ---------------- Sort by roll ---------------- */
+document.getElementById('btnSortRoll').addEventListener('click', () => {
+  state.students.sort((a,b) => (Number(a.roll)||0) - (Number(b.roll)||0));
+  saveState(); renderAll();
+});
+
+/* ---------------- Delete lock toggle ---------------- */
+function renderDelLockBtn(){
+  const b = document.getElementById('btnDelLock');
+  if(state.deleteLocked){
+    b.textContent = '🔒 विद्यार्थी हटवणे: बंद';
+    b.classList.remove('unlocked');
+  } else {
+    b.textContent = '🔓 विद्यार्थी हटवणे: चालू';
+    b.classList.add('unlocked');
+  }
+}
+document.getElementById('btnDelLock').addEventListener('click', () => {
+  if(state.deleteLocked){
+    state.deleteLocked = false;
+    showToast('विद्यार्थी हटवणे तात्पुरते चालू केले — काळजीपूर्वक वापरा');
+  } else {
+    state.deleteLocked = true;
+    showToast('विद्यार्थी हटवणे पुन्हा बंद केले');
+  }
+  renderDelLockBtn();
+  renderTable();
+});
+
+/* ---------------- Subject marks (पैकी गुण) lock toggle ---------------- */
+function renderSubjLockBtn(){
+  const b = document.getElementById('btnSubjLock');
+  if(!b) return;
+  if(state.subjectsLocked === false){
+    b.textContent = '🔓 विषय गुण: बदलता येतील';
+    b.classList.add('unlocked');
+  } else {
+    b.textContent = '🔒 विषय गुण: लॉक';
+    b.classList.remove('unlocked');
+  }
+}
+document.getElementById('btnSubjLock').addEventListener('click', () => {
+  if(state.subjectsLocked === false){
+    state.subjectsLocked = true;
+    showToast('विषयांचे पैकी गुण पुन्हा लॉक केले');
+  } else {
+    state.subjectsLocked = false;
+    showToast('विषयांचे पैकी गुण तात्पुरते अनलॉक केले — काळजीपूर्वक बदला');
+  }
+  saveState();
+  renderSubjLockBtn();
+  renderTable();
+});
+
+/* ---------------- Reset (password protected, per class-तुकडी) ---------------- */
+const resetPanel = document.getElementById('resetPanel');
+const resetPasswordInput = document.getElementById('resetPasswordInput');
+const setPasswordPanel = document.getElementById('setPasswordPanel');
+const oldPasswordInput = document.getElementById('oldPasswordInput');
+const newPasswordInput = document.getElementById('newPasswordInput');
+const oldPassLabel = document.getElementById('oldPassLabel');
+
+function closeAllDropPanels(){
+  resetPanel.classList.remove('show');
+  setPasswordPanel.classList.remove('show');
+}
+
+document.getElementById('btnReset').addEventListener('click', (e) => {
+  e.stopPropagation();
+  if(!state.resetPassword){
+    showToast('या वर्गासाठी आधी "🔑 पासवर्ड सेट करा" वापरून रिसेट पासवर्ड ठेवा');
+    return;
+  }
+  closeAllDropPanels();
+  resetPasswordInput.value = '';
+  resetPanel.classList.add('show');
+  resetPasswordInput.focus();
+});
+
+document.getElementById('resetCancelBtn').addEventListener('click', () => {
+  resetPanel.classList.remove('show');
+});
+
+document.getElementById('resetConfirmBtn').addEventListener('click', () => {
+  if(resetPasswordInput.value !== state.resetPassword){
+    showToast('❌ चुकीचा पासवर्ड — रिसेट झाला नाही');
+    return;
+  }
+  if(confirm('संपूर्ण डेटा मूळ यादीत रिसेट करायचा का? सर्व भरलेले गुण नष्ट होतील.')){
+    const std = allState.currentStd, sec = allState.currentSection;
+    const keepPassword = state.resetPassword;
+    allState.classes[std][sec] = makeDefaultClassState(std, sec);
+    allState.classes[std][sec].resetPassword = keepPassword; // पासवर्ड रिसेटनंतरही कायम राहतो
+    state = allState.classes[std][sec];
+    saveState(); renderAll();
+    showToast('डेटा रिसेट झाला (फक्त इयत्ता ' + std + ' - तुकडी ' + sec + ')');
+  }
+  resetPanel.classList.remove('show');
+});
+
+/* ---------------- Set / change per-class reset password ---------------- */
+document.getElementById('btnSetPassword').addEventListener('click', (e) => {
+  e.stopPropagation();
+  closeAllDropPanels();
+  oldPasswordInput.value = '';
+  newPasswordInput.value = '';
+  const hasPassword = !!state.resetPassword;
+  oldPassLabel.style.display = hasPassword ? '' : 'none';
+  oldPasswordInput.style.display = hasPassword ? '' : 'none';
+  setPasswordPanel.classList.add('show');
+  (hasPassword ? oldPasswordInput : newPasswordInput).focus();
+});
+
+document.getElementById('setPassCancelBtn').addEventListener('click', () => {
+  setPasswordPanel.classList.remove('show');
+});
+
+document.getElementById('setPassConfirmBtn').addEventListener('click', () => {
+  const hasPassword = !!state.resetPassword;
+  if(hasPassword && oldPasswordInput.value !== state.resetPassword){
+    showToast('❌ सध्याचा पासवर्ड चुकीचा आहे');
+    return;
+  }
+  const np = newPasswordInput.value;
+  if(!np || np.length < 4){
+    showToast('नवीन पासवर्ड किमान 4 अक्षरे/अंकांचा असावा');
+    return;
+  }
+  state.resetPassword = np;
+  saveState();
+  setPasswordPanel.classList.remove('show');
+  showToast('✅ या वर्गाचा (इयत्ता ' + allState.currentStd + ' - तुकडी ' + allState.currentSection + ') रिसेट पासवर्ड जतन झाला');
+});
+
+document.addEventListener('click', (e) => {
+  if(!e.target.closest('.dropAnchor')) closeAllDropPanels();
+});
+
+/* ---------------- Full backup export / import (सर्व इयत्ता + तुकड्या) ---------------- */
+document.getElementById('btnBackupExport').addEventListener('click', () => {
+  saveState();
+  const blob = new Blob([JSON.stringify(allState, null, 2)], {type:'application/json'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  const now = new Date();
+  const dd = String(now.getDate()).padStart(2,'0'), mm = String(now.getMonth()+1).padStart(2,'0'), yy = now.getFullYear();
+  a.href = url;
+  a.download = 'gurukul_nikal_backup_' + yy + '-' + mm + '-' + dd + '.json';
+  document.body.appendChild(a); a.click(); document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+  showToast('⬇️ पूर्ण बॅकअप (सर्व इयत्ता-तुकड्या) डाउनलोड झाले');
+});
+
+document.getElementById('backupFile').addEventListener('change', (e) => {
+  const file = e.target.files[0];
+  if(!file) return;
+  const reader = new FileReader();
+  reader.onload = () => {
+    let parsed;
+    try{ parsed = JSON.parse(reader.result); }
+    catch(err){ showToast('❌ फाईल वाचता आली नाही — योग्य बॅकअप JSON फाईल निवडा'); e.target.value=''; return; }
+    if(!parsed || !parsed.classes || typeof parsed.classes !== 'object'){
+      showToast('❌ ही वैध बॅकअप फाईल दिसत नाही');
+      e.target.value = '';
+      return;
+    }
+    if(!confirm('सध्याचा संपूर्ण डेटा (सर्व इयत्ता-तुकड्या) या बॅकअप फाईलने बदलला जाईल. पुढे जायचे का?')){
+      e.target.value = '';
+      return;
+    }
+    STD_LIST.forEach(s => { parsed.classes[s.std] = migrateStdEntry(s.std, parsed.classes[s.std]); });
+    if(!STD_LIST.some(s => s.std === parsed.currentStd)) parsed.currentStd = STD_LIST[0].std;
+    if(!SECTION_LIST.includes(parsed.currentSection)) parsed.currentSection = SECTION_LIST[0];
+    allState = parsed;
+    state = allState.classes[allState.currentStd][allState.currentSection];
+    saveState(); renderAll();
+    syncPushAllClasses();
+    showToast('✅ बॅकअप इम्पोर्ट झाले — सर्व इयत्ता-तुकड्यांचा डेटा पुनर्स्थापित झाला');
+    e.target.value = '';
+  };
+  reader.readAsText(file);
+});
+
+/* ---------------- Print ---------------- */
+document.getElementById('btnSave').addEventListener('click', async () => {
+  saveState();
+  if(navigator.onLine){
+    try{ await syncPushCurrent(); showToast('✅ जतन झाले व सिंक केले'); }
+    catch(e){ showToast('✅ जतन झाले (सिंक अयशस्वी)'); }
+  } else {
+    showToast('✅ सर्व डेटा जतन झाला (Saved) — इंटरनेट नसल्याने सिंक झालेला नाही');
+  }
+});
+
+document.getElementById('btnPrint').addEventListener('click', () => {
+  syncInputAttributesForPrint();
+  window.print();
+});
+function syncInputAttributesForPrint(){
+  // Ensures print engines that read the 'value' attribute (rather than live
+  // DOM property) still show the current typed values.
+  document.querySelectorAll('#mainTable input, #ghatakTable input').forEach(inp => {
+    inp.setAttribute('value', inp.value);
+  });
+}
+
+/* ---------------- विषय/स्तंभ व्यवस्थापन (Excel सारखे स्तंभ जोडा/काढा/नाव बदला) ---------------- */
+const subjectsOverlay = document.getElementById('subjectsOverlay');
+const subjectsRowsEl = document.getElementById('subjectsRows');
+const subjectsModalTitle = document.getElementById('subjectsModalTitle');
+let workingSubjects = [];
+let workingSubjectsMode = 'exam';
+
+function genSubjectKey(){
+  return 's' + Date.now().toString(36) + Math.random().toString(36).slice(2,6);
+}
+
+function renderSubjectsRows(){
+  subjectsRowsEl.innerHTML = '';
+  workingSubjects.forEach((s, i) => {
+    const row = document.createElement('div'); row.className = 'subjRow';
+
+    const nameInp = document.createElement('input');
+    nameInp.type = 'text'; nameInp.value = s.label; nameInp.placeholder = 'विषयाचे / स्तंभाचे नाव';
+    nameInp.addEventListener('input', e => { workingSubjects[i].label = e.target.value; });
+
+    const maxInp = document.createElement('input');
+    maxInp.type = 'number'; maxInp.min = '1'; maxInp.value = s.max; maxInp.title = 'पैकी गुण';
+    maxInp.addEventListener('input', e => { workingSubjects[i].max = e.target.value; });
+
+    const rm = document.createElement('button');
+    rm.type = 'button'; rm.className = 'btn small warn'; rm.textContent = '✕ काढा';
+    rm.title = 'हा स्तंभ काढा';
+    rm.addEventListener('click', () => {
+      if(workingSubjects.length <= 1){ showToast('किमान एक स्तंभ असणे आवश्यक आहे'); return; }
+      workingSubjects.splice(i, 1);
+      renderSubjectsRows();
+    });
+
+    row.appendChild(nameInp); row.appendChild(maxInp); row.appendChild(rm);
+    subjectsRowsEl.appendChild(row);
+  });
+}
+
+document.getElementById('btnManageSubjects').addEventListener('click', () => {
+  workingSubjectsMode = state.mode === 'ghatak' ? 'ghatak' : 'exam';
+  if(workingSubjectsMode === 'exam' && state.subjectsLocked !== false){
+    showToast('मुख्य परीक्षेचे विषय/पैकी गुण लॉक आहेत — आधी वरील "🔒 विषय गुण" बटणाने अनलॉक करा');
+    return;
+  }
+  const src = workingSubjectsMode === 'ghatak' ? state.ghatakSubjects : state.subjects;
+  workingSubjects = src.map(s => ({ key: s.key, label: s.label, max: s.max }));
+  const curStd = STD_LIST.find(x => x.std === allState.currentStd);
+  const stdLabel = curStd ? curStd.label : allState.currentStd;
+  subjectsModalTitle.textContent = 'विषय/स्तंभ व्यवस्थापित करा — इयत्ता ' + stdLabel + ' तुकडी ' + allState.currentSection +
+    ' (' + (workingSubjectsMode === 'ghatak' ? 'घटक संच चाचणी' : 'मुख्य परीक्षा') + ')';
+  renderSubjectsRows();
+  subjectsOverlay.classList.add('show');
+});
+
+document.getElementById('btnAddSubject').addEventListener('click', () => {
+  workingSubjects.push({
+    key: genSubjectKey(),
+    label: 'नवीन विषय',
+    max: workingSubjectsMode === 'ghatak' ? 20 : 25
+  });
+  renderSubjectsRows();
+});
+
+document.getElementById('subjectsCancel').addEventListener('click', () => {
+  subjectsOverlay.classList.remove('show');
+});
+subjectsOverlay.addEventListener('click', e => { if(e.target === subjectsOverlay) subjectsOverlay.classList.remove('show'); });
+
+document.getElementById('subjectsSave').addEventListener('click', () => {
+  if(workingSubjects.length === 0){ showToast('किमान एक स्तंभ असणे आवश्यक आहे'); return; }
+  for(const s of workingSubjects){
+    if(!String(s.label).trim()){ showToast('प्रत्येक स्तंभाला नाव द्या'); return; }
+    const m = Number(s.max);
+    if(isNaN(m) || m <= 0){ showToast('प्रत्येक स्तंभासाठी योग्य पैकी गुण द्या'); return; }
+  }
+  const cleaned = workingSubjects.map(s => ({ key: s.key, label: String(s.label).trim(), max: Number(s.max) }));
+  if(workingSubjectsMode === 'ghatak'){
+    state.ghatakSubjects = cleaned;
+  } else {
+    state.subjects = cleaned;
+  }
+  saveState(); renderAll();
+  subjectsOverlay.classList.remove('show');
+  showToast('✅ स्तंभ जतन झाले (फक्त सध्याच्या इयत्ता-तुकडी व टॅबसाठी)');
+});
+
+/* ---------------- CSV export ---------------- */
+document.getElementById('btnExportCsv').addEventListener('click', () => {
+  if(state.mode === 'ghatak'){
+    const gi = state.currentGhatak;
+    const ghSubjects = state.ghatakSubjects;
+    const header = ['अ.नं.','रोल क्र.','नाव', ...ghSubjects.map(s=>s.label+' ('+s.max+')'), 'एकूण','टक्केवारी'];
+    const lines = [header.join(',')];
+    state.students.forEach((st, idx) => {
+      const g = st.ghatak[gi];
+      const c = computeGhatakRow(g, ghSubjects);
+      const row = [
+        idx+1, st.roll, '"'+st.name.replace(/"/g,'""')+'"',
+        ...ghSubjects.map(s => g[s.key] ?? ''),
+        fmt(c.total), c.pct===null?'':fmt(c.pct,1)
+      ];
+      lines.push(row.join(','));
+    });
+    const blob = new Blob(['\uFEFF'+lines.join('\n')], {type:'text/csv;charset=utf-8;'});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url; a.download = 'ghatak_sanch_chachani_' + (gi+1) + '.csv';
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+    showToast('CSV डाउनलोड झाले');
+    return;
+  }
+  const ci = state.currentExam;
+  const subjects = state.subjects;
+  const showComb = hasCombinedMarGan(subjects);
+  const insAfter = combinedInsertAfterKey(subjects);
+  const subjHeaderCells = [];
+  subjects.forEach(s => {
+    subjHeaderCells.push(s.label+' ('+s.max+')');
+    if(showComb && s.key === insAfter) subjHeaderCells.push('मराठी+गणित एकत्रित ('+combinedMarGanMax(subjects)+')');
+  });
+  const header = ['अ.नं.','रोल क्र.','नाव', ...subjHeaderCells, 'एकूण','शेकडा गुण','शेरा'];
+  const lines = [header.join(',')];
+  state.students.forEach((st, idx) => {
+    const ex = st.exams[ci];
+    const c = computeRow(ex, subjects);
+    const subjCells = [];
+    subjects.forEach(s => {
+      subjCells.push(ex[s.key] ?? '');
+      if(showComb && s.key === insAfter){ const cv = combinedMarGanVal(ex); subjCells.push(cv===null?'':fmt(cv)); }
+    });
+    const row = [
+      idx+1, st.roll, '"'+st.name.replace(/"/g,'""')+'"',
+      ...subjCells,
+      fmt(c.total), c.pct===null?'':fmt(c.pct,1), c.shera
+    ];
+    lines.push(row.join(','));
+  });
+  const blob = new Blob(['\uFEFF'+lines.join('\n')], {type:'text/csv;charset=utf-8;'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url; a.download = 'nikal_pariksha_' + (ci+1) + '.csv';
+  document.body.appendChild(a); a.click(); document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+  showToast('CSV डाउनलोड झाले');
+});
+
+/* ---------------- Bulk upload modal ---------------- */
+const bulkOverlay = document.getElementById('bulkOverlay');
+document.getElementById('btnBulkUpload').addEventListener('click', () => {
+  document.getElementById('bulkText').value = '';
+  document.getElementById('fileName').textContent = '';
+  bulkOverlay.classList.add('show');
+});
+document.getElementById('bulkCancel').addEventListener('click', () => bulkOverlay.classList.remove('show'));
+bulkOverlay.addEventListener('click', e => { if(e.target === bulkOverlay) bulkOverlay.classList.remove('show'); });
+
+document.getElementById('csvFile').addEventListener('change', e => {
+  const file = e.target.files[0];
+  if(!file) return;
+  document.getElementById('fileName').textContent = file.name;
+  const reader = new FileReader();
+  reader.onload = ev => { document.getElementById('bulkText').value = ev.target.result; };
+  reader.readAsText(file, 'UTF-8');
+});
+
+function parseBulkText(text){
+  const lines = text.split('\n').map(l => l.trim()).filter(l => l.length>0);
+  return lines.map(line => {
+    // split by comma or tab
+    const parts = line.split(/[,\t]/).map(p => p.trim()).filter(p=>p.length>0);
+    if(parts.length >= 2 && /^\d+$/.test(parts[0])){
+      return { roll: parts[0], name: parts.slice(1).join(' ') };
+    }
+    return { roll: '', name: line };
+  });
+}
+
+document.getElementById('bulkAppend').addEventListener('click', () => {
+  const parsed = parseBulkText(document.getElementById('bulkText').value);
+  if(parsed.length === 0){ showToast('यादी रिकामी आहे'); return; }
+  const existingRolls = new Set(state.students.map(s => String(s.roll)));
+  const maxNo = state.students.reduce((m,s)=>Math.max(m, s.no||0), 0);
+  const maxRoll = state.students.reduce((m,s)=>Math.max(m, Number(s.roll)||0), 0);
+  let added = 0, skipped = 0;
+  parsed.forEach((p, i) => {
+    const roll = p.roll || (maxRoll+i+1);
+    if(existingRolls.has(String(roll))){ skipped++; return; } // avoid duplicate roll numbers
+    existingRolls.add(String(roll));
+    state.students.push({
+      id: 'S'+Date.now()+i, no: maxNo+added+1, roll, name: p.name,
+      exams: Array.from({length:state.examCount}, () => blankMarks(state.subjects)),
+      ghatak: blankGhatakSet(state.ghatakSubjects)
+    });
+    added++;
+  });
+  saveState(); renderAll();
+  bulkOverlay.classList.remove('show');
+  if(skipped > 0){
+    showToast(added + ' विद्यार्थी जोडले, ' + skipped + ' आधीच अस्तित्वात असल्याने वगळले');
+  } else {
+    showToast(added + ' विद्यार्थी यादीत जोडले');
+  }
+});
+
+document.getElementById('bulkReplace').addEventListener('click', () => {
+  const parsed = parseBulkText(document.getElementById('bulkText').value);
+  if(parsed.length === 0){ showToast('यादी रिकामी आहे'); return; }
+  if(!confirm('सध्याची संपूर्ण यादी व सर्व गुण बदलले जातील. पुढे जायचे का?')) return;
+  state.students = parsed.map((p, i) => ({
+    id: 'S'+Date.now()+i, no: i+1, roll: p.roll || (i+1), name: p.name,
+    exams: Array.from({length:state.examCount}, () => blankMarks(state.subjects)),
+    ghatak: blankGhatakSet(state.ghatakSubjects)
+  }));
+  saveState(); renderAll();
+  bulkOverlay.classList.remove('show');
+  showToast('संपूर्ण यादी बदलली — ' + parsed.length + ' विद्यार्थी');
+});
+
+/* ---------------- Cloud Sync (मोफत, विनाखाते kvdb.io सेवेद्वारे) ----------------
+   प्रत्येक इयत्ता-तुकडी (वर्ग) साठी स्वतंत्र, आपोआप ठरणारा सिंक कोड वापरला जातो —
+   त्यामुळे कुठलाही कोड हाताने टाकावा लागत नाही. याच शाळेची हीच फाईल वापरणाऱ्या
+   सर्व डिव्हाइसेसवर एकाच वर्गासाठी आपोआप तोच कोड तयार होतो व तो वर्ग आपोआप सिंक
+   होतो; इतर वर्ग वेगळे व स्वतंत्र राहतात. */
+const SYNC_SCHOOL_SLUG = 'ryat-gurukul-shivaji-miri-pathardi-2026';
+const SECTION_ASCII = {'अ':'a','ब':'b','क':'c'};
+const SYNC_DATA_NAME = 'gurukul_data';
+let syncPushTimer = null, syncPullTimer = null, syncBusy = false;
+let lastSyncOkAt = null;
+
+function classSyncCode(std, sec){
+  return SYNC_SCHOOL_SLUG + '_std' + std + '_' + (SECTION_ASCII[sec] || 'x');
+}
+function syncUrl(code){ return 'https://kvdb.io/' + encodeURIComponent(code) + '/' + SYNC_DATA_NAME; }
+
+function setSyncStatus(kind){
+  const el = document.getElementById('syncIndicator');
+  if(!navigator.onLine){
+    el.textContent = '🔴 ऑफलाइन — इंटरनेट उपलब्ध नाही';
+    el.style.background = 'rgba(255,61,104,.28)'; el.style.color='#fff'; el.style.border='1px solid rgba(255,61,104,.6)';
+    return;
+  }
+  if(kind === 'syncing'){
+    el.textContent = '🔄 सिंक करत आहे...';
+    el.style.background = 'rgba(255,184,0,.28)'; el.style.color='#fff'; el.style.border='1px solid rgba(255,184,0,.6)';
+  } else if(kind === 'ok'){
+    lastSyncOkAt = new Date();
+    const hh = String(lastSyncOkAt.getHours()).padStart(2,'0'), mm = String(lastSyncOkAt.getMinutes()).padStart(2,'0');
+    el.textContent = '🟢 सिंक अद्ययावत (शेवटचे ' + hh + ':' + mm + ')';
+    el.style.background = 'rgba(0,229,160,.28)'; el.style.color='#00432f'; el.style.border='1px solid rgba(0,229,160,.6)';
+  } else if(kind === 'fail'){
+    el.textContent = '🟠 सिंक अयशस्वी — इंटरनेट/नेटवर्क तपासा';
+    el.style.background = 'rgba(255,184,0,.3)'; el.style.color='#5a3d20'; el.style.border='1px solid rgba(255,184,0,.6)';
+  }
+}
+
+async function syncPushCurrent(){
+  if(!navigator.onLine) return;
+  const std = allState.currentStd, sec = allState.currentSection;
+  const code = classSyncCode(std, sec);
+  try{
+    state._updatedAt = Date.now();
+    saveState();
+    await fetch(syncUrl(code), {
+      method:'PUT', headers:{'Content-Type':'text/plain'},
+      body: JSON.stringify(state)
+    });
+    setSyncStatus('ok');
+  }catch(e){ setSyncStatus('fail'); }
+}
+function schedulePush(){
+  clearTimeout(syncPushTimer);
+  syncPushTimer = setTimeout(syncPushCurrent, 2000);
+}
+
+async function syncPushAllClasses(){
+  if(!navigator.onLine) { showToast('इंटरनेट नसल्याने सर्व वर्ग सिंक होऊ शकले नाहीत'); return; }
+  showToast('सर्व इयत्ता-तुकड्या सिंक करत आहे...');
+  for(const s of STD_LIST){
+    for(const sec of SECTION_LIST){
+      const cs = allState.classes[s.std][sec];
+      const code = classSyncCode(s.std, sec);
+      try{
+        cs._updatedAt = Date.now();
+        await fetch(syncUrl(code), {
+          method:'PUT', headers:{'Content-Type':'text/plain'},
+          body: JSON.stringify(cs)
+        });
+      }catch(e){ /* पुढील वर्गासाठी सुरू ठेवा */ }
+    }
+  }
+  saveState();
+  showToast('✅ सर्व इयत्ता-तुकड्यांचा डेटा सिंक झाला');
+}
+
+async function syncPullCurrent(silent){
+  if(!navigator.onLine || syncBusy) return;
+  syncBusy = true;
+  const std = allState.currentStd, sec = allState.currentSection;
+  const code = classSyncCode(std, sec);
+  try{
+    setSyncStatus('syncing');
+    const res = await fetch(syncUrl(code));
+    if(res.status === 404){ setSyncStatus('ok'); syncBusy=false; return; }
+    if(!res.ok){ setSyncStatus('fail'); syncBusy=false; return; }
+    const text = await res.text();
+    if(!text){ setSyncStatus('ok'); syncBusy=false; return; }
+    const remote = JSON.parse(text);
+    // वापरकर्त्याने दरम्यान वर्ग बदलला असेल तर हा जुना निकाल लागू करू नये
+    if(allState.currentStd !== std || allState.currentSection !== sec){ syncBusy=false; return; }
+    if(remote && Array.isArray(remote.students) && (!state._updatedAt || (remote._updatedAt||0) > state._updatedAt)){
+      const migrated = migrateClassState(std, sec, remote);
+      allState.classes[std][sec] = migrated;
+      state = migrated;
+      saveState(); renderAll();
+      if(!silent) showToast('दुसऱ्या डिव्हाइसवरील नवीन डेटा मिळाला');
+    }
+    setSyncStatus('ok');
+  }catch(e){ setSyncStatus('fail'); }
+  syncBusy = false;
+}
+
+function startSyncPolling(){
+  clearInterval(syncPullTimer);
+  syncPullTimer = setInterval(() => syncPullCurrent(true), 15000);
+}
+function stopSyncPolling(){ clearInterval(syncPullTimer); }
+
+function onClassSwitched(){
+  stopSyncPolling();
+  syncPullCurrent(true);
+  startSyncPolling();
+}
+
+document.getElementById('btnSyncNow').addEventListener('click', async () => {
+  setSyncStatus('syncing');
+  await syncPullCurrent(true);
+  await syncPushCurrent();
+  showToast('✅ इयत्ता ' + allState.currentStd + ' - तुकडी ' + allState.currentSection + ' सिंक झाली');
+});
+
+window.addEventListener('online', () => { setSyncStatus('ok'); syncPullCurrent(true); });
+window.addEventListener('offline', () => setSyncStatus('fail'));
+
+/* ---------------- Init ---------------- */
+renderAll();
+setSyncStatus('syncing');
+syncPullCurrent(true);
+startSyncPolling();
+</script>
+</body>
+</html>
